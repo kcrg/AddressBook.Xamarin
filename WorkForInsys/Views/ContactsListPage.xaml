@@ -2,10 +2,12 @@
     x:Class="WorkForInsys.Views.ContactsListPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:WorkForInsys.Models="clr-namespace:WorkForInsys.Models"
+    xmlns:b="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
-    Title="Contacts List"
+    Title="Contacts"
     prism:ViewModelLocator.AutowireViewModel="True"
     Visual="Material"
     mc:Ignorable="d">
@@ -17,11 +19,56 @@
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
-        <StackLayout>
-            <Label
+        <Grid>
+            <ActivityIndicator
                 HorizontalOptions="CenterAndExpand"
-                Text="Welcome to Contact List Page!"
+                IsRunning="{Binding IsLoading}"
                 VerticalOptions="CenterAndExpand"/>
-        </StackLayout>
+
+            <CollectionView x:Name="collectionView"
+                ItemsSource="{Binding ContactsList}"
+                SelectionMode="Single">
+                <CollectionView.Behaviors>
+                    <b:EventToCommandBehavior
+                        Command="{Binding ItemTappedCommand}"
+                        EventArgsParameterPath="CurrentSelection"
+                        EventName="SelectionChanged"/>
+                </CollectionView.Behaviors>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="WorkForInsys.Models:ContactModel">
+                        <StackLayout Padding="10">
+                            <Frame>
+                                <StackLayout>
+                                    <StackLayout>
+                                        <Label Text="{x:Binding Name}"/>
+                                        <Label Text="{x:Binding Surname}"/>
+                                    </StackLayout>
+
+                                    <Label Text="{x:Binding PhoneNumber}"/>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+                <CollectionView.EmptyView>
+                    <Grid>
+                        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                            <Label
+                                FontFamily="Lato-Bold.ttf#Lato-Bold"
+                                FontSize="18"
+                                HorizontalTextAlignment="Center"
+                                Text="There is no contacts to show."
+                                TextColor="DarkGray"/>
+                            <Label
+                                FontFamily="Lato-Semibold.ttf#Lato-Semibold"
+                                FontSize="14"
+                                HorizontalTextAlignment="Center"
+                                Text="Try add new one!"
+                                TextColor="DarkGray"/>
+                        </StackLayout>
+                    </Grid>
+                </CollectionView.EmptyView>
+            </CollectionView>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

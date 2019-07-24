@@ -22,6 +22,8 @@ namespace WorkForInsys.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            Forms.SetFlags("CollectionView_Experimental");
+
             Forms.Init();
             FormsMaterial.Init();
             LoadApplication(new App(new iOSInitializer()));

@@ -22,6 +22,8 @@ namespace WorkForInsys.Droid
 
             base.OnCreate(bundle);
 
+            Forms.SetFlags("CollectionView_Experimental");
+
             Forms.Init(this, bundle);
             FormsMaterial.Init(this, bundle);
             Platform.Init(this, bundle);

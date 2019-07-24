@@ -5,13 +5,13 @@
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
-    Title="Contact Details"
+    Title="Details"
     prism:ViewModelLocator.AutowireViewModel="True"
     Visual="Material"
     mc:Ignorable="d">
     <ContentPage.Content>
         <StackLayout>
-            <Label
+            <Label x:Name="detail"
                 HorizontalOptions="CenterAndExpand"
                 Text="Welcome to Contact Detail Page!"
                 VerticalOptions="CenterAndExpand"/>
