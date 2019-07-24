@@ -1,4 +1,5 @@
-﻿using Android.App;
+﻿using Acr.UserDialogs;
+using Android.App;
 using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
@@ -24,6 +25,7 @@ namespace WorkForInsys.Droid
             Forms.Init(this, bundle);
             FormsMaterial.Init(this, bundle);
             Platform.Init(this, bundle);
+            UserDialogs.Init(this);
             LoadApplication(new App(new AndroidInitializer()));
         }
 

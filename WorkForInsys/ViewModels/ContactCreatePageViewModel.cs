@@ -1,11 +1,9 @@
-﻿using Prism.Navigation;
+﻿using Prism.Mvvm;
 
 namespace WorkForInsys.ViewModels
 {
-    public class ContactCreatePageViewModel : ViewModelBase
+    public class ContactCreatePageViewModel : BindableBase
     {
-        public ContactCreatePageViewModel(INavigationService navigationService) : base(navigationService)
-        {
-        }
+
     }
 }

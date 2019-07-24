@@ -189,6 +189,9 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Acr.UserDialogs">
+      <Version>7.0.4</Version>
+    </PackageReference>
     <PackageReference Include="Prism.Forms">
       <Version>7.1.0.431</Version>
     </PackageReference>
