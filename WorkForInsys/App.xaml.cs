@@ -2,7 +2,6 @@
 using Prism.Ioc;
 using WorkForInsys.ViewModels;
 using WorkForInsys.Views;
-using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
@@ -14,17 +13,17 @@ namespace WorkForInsys
 
         public App(IPlatformInitializer initializer) : base(initializer) { }
 
-        protected override async void OnInitialized()
+        protected override void OnInitialized()
         {
             InitializeComponent();
 
-            await NavigationService.NavigateAsync("NavigationPage/MainPage");
+            MainPage = new AppShell();
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterForNavigation<NavigationPage>();
-            containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+            containerRegistry.RegisterForNavigation<AppShell>();
+            containerRegistry.RegisterForNavigation<ContactsListPage, ContactsListPageViewModel>();
         }
     }
 }
