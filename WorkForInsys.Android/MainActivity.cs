@@ -1,8 +1,11 @@
 ﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
+using Android.Runtime;
 using Prism;
 using Prism.Ioc;
+using Xamarin.Essentials;
+using Xamarin.Forms;
 
 namespace WorkForInsys.Droid
 {
@@ -18,8 +21,17 @@ namespace WorkForInsys.Droid
 
             base.OnCreate(bundle);
 
-            Xamarin.Forms.Forms.Init(this, bundle);
+            Forms.Init(this, bundle);
+            FormsMaterial.Init(this, bundle);
+            Platform.Init(this, bundle);
             LoadApplication(new App(new AndroidInitializer()));
+        }
+
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)
+        {
+            Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+
+            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
     }
 

@@ -5,7 +5,8 @@
     xmlns:views="clr-namespace:WorkForInsys.Views"
     Shell.BackgroundColor="White"
     Shell.ForegroundColor="Black"
-    Shell.TitleColor="Black">
+    Shell.TitleColor="Black"
+    Visual="Material">
 
     <Shell.FlyoutHeader>
         <Grid HeightRequest="200">
@@ -14,31 +15,24 @@
         </Grid>
     </Shell.FlyoutHeader>
 
-    <FlyoutItem Title="Address List" Icon="DashboardIcon.xml">
+    <FlyoutItem Title="Contacts List" Icon="icon_contacts_list.xml">
         <Tab>
             <ShellContent>
                 <views:ContactsListPage/>
             </ShellContent>
         </Tab>
     </FlyoutItem>
-    <FlyoutItem Title="Zlecenia" Icon="OrdersIcon.xml">
+    <FlyoutItem Title="Add Contact" Icon="icon_add_contact.xml">
         <Tab>
             <ShellContent>
-                <views:ContactsListPage/>
+                <views:ContactCreatePage/>
             </ShellContent>
         </Tab>
     </FlyoutItem>
-    <FlyoutItem Title="Stali klienci" Icon="RegularClientsIcon.xml">
+    <FlyoutItem Title="About app" Icon="icon_info.xml">
         <Tab>
             <ShellContent>
-                <views:ContactsListPage/>
-            </ShellContent>
-        </Tab>
-    </FlyoutItem>
-    <FlyoutItem Title="Usługi" Icon="ServicesIcon.xml">
-        <Tab>
-            <ShellContent>
-                <views:ContactsListPage/>
+                <views:AboutPage/>
             </ShellContent>
         </Tab>
     </FlyoutItem>

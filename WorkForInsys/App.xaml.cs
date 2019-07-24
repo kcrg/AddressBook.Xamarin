@@ -24,6 +24,8 @@ namespace WorkForInsys
         {
             containerRegistry.RegisterForNavigation<AppShell>();
             containerRegistry.RegisterForNavigation<ContactsListPage, ContactsListPageViewModel>();
+            containerRegistry.RegisterForNavigation<ContactDetailPage, ContactDetailPageViewModel>();
+            containerRegistry.RegisterForNavigation<ContactCreatePage, ContactCreatePageViewModel>();
         }
     }
 }

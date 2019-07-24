@@ -1,11 +1,11 @@
 ﻿<ContentPage
-    x:Class="WorkForInsys.Views.ContactsListPage"
+    x:Class="WorkForInsys.Views.ContactDetailPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
-    Title="Contacts List"
+    Title="Contact Details"
     prism:ViewModelLocator.AutowireViewModel="True"
     Visual="Material"
     mc:Ignorable="d">
@@ -13,7 +13,7 @@
         <StackLayout>
             <Label
                 HorizontalOptions="CenterAndExpand"
-                Text="Welcome to Contact List Page!"
+                Text="Welcome to Contact Detail Page!"
                 VerticalOptions="CenterAndExpand"/>
         </StackLayout>
     </ContentPage.Content>
