@@ -1,0 +1,9 @@
+﻿<prism:PrismApplication
+    x:Class="WorkForInsys.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:prism="clr-namespace:Prism.DryIoc;assembly=Prism.DryIoc.Forms">
+    <Application.Resources>
+        <!--  Application resource dictionary  -->
+    </Application.Resources>
+</prism:PrismApplication>

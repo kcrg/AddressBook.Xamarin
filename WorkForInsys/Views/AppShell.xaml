@@ -1,0 +1,19 @@
+﻿<Shell
+    x:Class="WorkForInsys.Views.AppShell"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <!--<Shell.FlyoutHeader>
+
+    </Shell.FlyoutHeader>-->
+    <FlyoutItem Title="Cats" Icon="cat.png">
+        <Tab>
+            <ShellContent/>
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Dogs" Icon="dog.png">
+        <Tab>
+            <ShellContent/>
+        </Tab>
+    </FlyoutItem>
+</Shell>
