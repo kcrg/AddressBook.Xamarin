@@ -9,12 +9,36 @@
     prism:ViewModelLocator.AutowireViewModel="True"
     Visual="Material"
     mc:Ignorable="d">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Command="{Binding SaveContactCommand}"
+            IconImageSource="icon_save.xml"
+            Text="Save"/>
+    </ContentPage.ToolbarItems>
+
     <ContentPage.Content>
-        <StackLayout>
-            <Label
-                HorizontalOptions="CenterAndExpand"
-                Text="Welcome to Contact Create Page!"
-                VerticalOptions="CenterAndExpand"/>
-        </StackLayout>
+        <Grid Padding="20">
+            <StackLayout VerticalOptions="Center">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Entry
+                        Grid.Column="0"
+                        BackgroundColor="White"
+                        Placeholder="Name"/>
+                    <Entry
+                        Grid.Column="1"
+                        BackgroundColor="White"
+                        Placeholder="Surname"/>
+                </Grid>
+
+                <Entry BackgroundColor="White" Placeholder="Phone number"/>
+                <Entry BackgroundColor="White" Placeholder="E-mail"/>
+                <Entry BackgroundColor="White" Placeholder="Address"/>
+            </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

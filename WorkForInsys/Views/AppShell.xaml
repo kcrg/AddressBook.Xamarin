@@ -5,35 +5,20 @@
     xmlns:views="clr-namespace:WorkForInsys.Views"
     Shell.BackgroundColor="White"
     Shell.ForegroundColor="Black"
+    Shell.TabBarUnselectedColor="DarkGray"
     Shell.TitleColor="Black"
     Visual="Material">
-
-    <Shell.FlyoutHeader>
-        <Grid HeightRequest="200">
-            <Image IsOpaque="False" Source="icon_background.xml"/>
-            <Image IsOpaque="True" Source="icon_foreground.xml"/>
-        </Grid>
-    </Shell.FlyoutHeader>
-
-    <FlyoutItem Title="Contacts List" Icon="icon_contacts_list.xml">
-        <Tab>
+    <TabBar>
+        <Tab Title="Contacts" Icon="icon_contacts_list.xml">
             <ShellContent>
                 <views:ContactsListPage/>
             </ShellContent>
         </Tab>
-    </FlyoutItem>
-    <FlyoutItem Title="Add Contact" Icon="icon_add_contact.xml">
-        <Tab>
-            <ShellContent>
-                <views:ContactCreatePage/>
-            </ShellContent>
-        </Tab>
-    </FlyoutItem>
-    <FlyoutItem Title="About app" Icon="icon_info.xml">
-        <Tab>
+
+        <Tab Title="About" Icon="icon_info.xml">
             <ShellContent>
                 <views:AboutPage/>
             </ShellContent>
         </Tab>
-    </FlyoutItem>
+    </TabBar>
 </Shell>

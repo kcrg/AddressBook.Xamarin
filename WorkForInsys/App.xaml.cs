@@ -2,6 +2,7 @@
 using Prism.Ioc;
 using WorkForInsys.ViewModels;
 using WorkForInsys.Views;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
@@ -18,6 +19,10 @@ namespace WorkForInsys
             InitializeComponent();
 
             MainPage = new AppShell();
+
+            Routing.RegisterRoute("contactlist", typeof(ContactsListPage));
+            Routing.RegisterRoute("contactlist/contactcreate", typeof(ContactCreatePage));
+            Routing.RegisterRoute("contactlist/contactdetail", typeof(ContactDetailPage));
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)

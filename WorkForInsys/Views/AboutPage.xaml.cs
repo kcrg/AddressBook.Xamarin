@@ -15,7 +15,7 @@ namespace WorkForInsys.Views
         private async void StartAnimation()
         {
             // Waiting for the page to load
-            await Task.Delay(250);
+            //await Task.Delay(250);
 
             _ = await Task.WhenAll(
                 ProfilePicture.TranslateTo(0, -60, 1100, Easing.CubicOut),
@@ -23,7 +23,7 @@ namespace WorkForInsys.Views
                 );
 
             _ = await Task.WhenAll(
-               DescriptionPanel.TranslateTo(0, -40, 1000, Easing.CubicOut),
+               DescriptionPanel.TranslateTo(0, -15, 1000, Easing.CubicOut),
                DescriptionPanel.FadeTo(100, 1000, Easing.CubicIn),
 
                GithubButton.FadeTo(100, 1000, Easing.CubicIn)
