@@ -39,7 +39,7 @@
                         <StackLayout Padding="10">
                             <Frame>
                                 <StackLayout>
-                                    <StackLayout>
+                                    <StackLayout Orientation="Horizontal">
                                         <Label Text="{x:Binding Name}"/>
                                         <Label Text="{x:Binding Surname}"/>
                                     </StackLayout>

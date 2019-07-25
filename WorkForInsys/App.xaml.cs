@@ -39,14 +39,12 @@ namespace WorkForInsys
 
             Routing.RegisterRoute("contactlist", typeof(ContactsListPage));
             Routing.RegisterRoute("contactlist/contactcreate", typeof(ContactCreatePage));
-            Routing.RegisterRoute("contactlist/contactdetail", typeof(ContactDetailPage));
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<AppShell>();
             containerRegistry.RegisterForNavigation<ContactsListPage, ContactsListPageViewModel>();
-            containerRegistry.RegisterForNavigation<ContactDetailPage, ContactDetailPageViewModel>();
             containerRegistry.RegisterForNavigation<ContactCreatePage, ContactCreatePageViewModel>();
         }
     }

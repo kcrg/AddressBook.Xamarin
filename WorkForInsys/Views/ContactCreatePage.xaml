@@ -5,7 +5,7 @@
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
-    Title="Add Contact"
+    Title="Add"
     prism:ViewModelLocator.AutowireViewModel="True"
     Visual="Material"
     mc:Ignorable="d">
@@ -28,16 +28,27 @@
                     <Entry
                         Grid.Column="0"
                         BackgroundColor="White"
-                        Placeholder="Name"/>
+                        Placeholder="Name"
+                        Text="{Binding Name}"/>
                     <Entry
                         Grid.Column="1"
                         BackgroundColor="White"
-                        Placeholder="Surname"/>
+                        Placeholder="Surname"
+                        Text="{Binding Surname}"/>
                 </Grid>
 
-                <Entry BackgroundColor="White" Placeholder="Phone number"/>
-                <Entry BackgroundColor="White" Placeholder="E-mail"/>
-                <Entry BackgroundColor="White" Placeholder="Address"/>
+                <Entry
+                    BackgroundColor="White"
+                    Placeholder="Phone number"
+                    Text="{Binding PhoneNumber}"/>
+                <Entry
+                    BackgroundColor="White"
+                    Placeholder="E-mail"
+                    Text="{Binding Email}"/>
+                <Entry
+                    BackgroundColor="White"
+                    Placeholder="Address"
+                    Text="{Binding Address}"/>
             </StackLayout>
         </Grid>
     </ContentPage.Content>

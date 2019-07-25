@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using WorkForInsys.ViewModels;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace WorkForInsys.Views
@@ -11,11 +12,14 @@ namespace WorkForInsys.Views
             InitializeComponent();
         }
 
-        protected override async void OnAppearing()
+        protected override void OnAppearing()
         {
             base.OnAppearing();
 
-            //collectionView.ItemsSource = await App.Database.GetContactsAsync();
+            if ((BindingContext is ContactsListPageViewModel vm) && vm.LoadDatabase.CanExecute())
+            {
+                vm.LoadDatabase.Execute();
+            }
         }
     }
 }

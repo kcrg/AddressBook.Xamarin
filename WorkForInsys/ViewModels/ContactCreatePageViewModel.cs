@@ -10,6 +10,12 @@ namespace WorkForInsys.ViewModels
 
     public class ContactCreatePageViewModel : BindableBase
     {
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public string PhoneNumber { get; set; }
+        public string Email { get; set; }
+        public string Address { get; set; }
+
         public DelegateCommand SaveContactCommand { get; private set; }
 
         public ContactCreatePageViewModel()
@@ -18,11 +24,11 @@ namespace WorkForInsys.ViewModels
             {
                 ContactModel contact = new ContactModel()
                 {
-                    Name = "Kacper",
-                    Surname = "Tryniecki",
-                    PhoneNumber = "733428869",
-                    Email = "kacper@tryniecki.com",
-                    Address = "Rzeszów"
+                    Name = Name,
+                    Surname = Surname,
+                    PhoneNumber = PhoneNumber,
+                    Email = Email,
+                    Address = Address
                 };
                 await App.Database.SaveContactAsync(contact);
 

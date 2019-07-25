@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿using Acr.UserDialogs;
 using Prism.Commands;
 using Prism.Mvvm;
 using System;
@@ -30,52 +30,46 @@ namespace WorkForInsys.ViewModels
         public DelegateCommand AddContactCommand { get; private set; }
         public DelegateCommand<IReadOnlyList<object>> ItemTappedCommand { get; private set; }
 
+        public DelegateCommand LoadDatabase { get; private set; }
+
         public ContactsListPageViewModel()
         {
             ContactsList = new ObservableCollection<ContactModel>();
-
-            LoadData();
 
             AddContactCommand = new DelegateCommand(async () =>
             {
                 await Shell.Current.GoToAsync("contactlist/contactcreate");
             });
 
-            ItemTappedCommand = new DelegateCommand<IReadOnlyList<object>>(NavigateBlock, (o) => !IsBlocked);
+            ItemTappedCommand = new DelegateCommand<IReadOnlyList<object>>(ShowDetails, (o) => !IsBlocked);
+
+            LoadDatabase = new DelegateCommand(LoadData);
         }
 
-        public void NavigateBlock(IReadOnlyList<object> obj)
+        public void ShowDetails(IReadOnlyList<object> obj)
         {
             IsBlocked = true;
 
             List<object> list = (List<object>)obj;
             ContactModel[] contact = list.ConvertAll(item => (ContactModel)item).ToArray();
 
-            NavigateToDetail(contact[0]);
-        }
-
-        public async void NavigateToDetail(ContactModel Contact)
-        {
-            if (Contact == null)
+            if (contact == null)
             {
                 throw new ArgumentException("Given contact is null");
             }
 
-            string entry = JsonConvert.SerializeObject(Contact);
+            string Message = $"{contact[0].Name} {contact[0].Surname}\nPhone number: {contact[0].PhoneNumber}\nE-mail: {contact[0].Email}\nAddress: {contact[0].Address}";
             IsBlocked = false;
-            await Shell.Current.GoToAsync($"contactlist/contactdetail?entry={entry}");
+            UserDialogs.Instance.AlertAsync(Message, "Details", "Close");
         }
 
         public async void LoadData()
         {
-            List<ContactModel> lol = await App.Database.GetContactsAsync();
-            foreach (ContactModel contact in lol)
+            List<ContactModel> database = await App.Database.GetContactsAsync();
+            foreach (ContactModel contact in database)
             {
                 ContactsList.Add(contact);
             }
-            //ContactsList = await App.Database.GetContactsAsync();
-            //Contacts = (List<ContactModel>)await App.Database.GetContactsAsync();
-            //Contacts = new ObservableCollection<ContactModel>(ContactsList as List<ContactModel>);
 
             IsLoading = false;
         }

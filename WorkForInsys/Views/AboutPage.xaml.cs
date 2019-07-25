@@ -15,7 +15,7 @@ namespace WorkForInsys.Views
         private async void StartAnimation()
         {
             // Waiting for the page to load
-            //await Task.Delay(250);
+            await Task.Delay(250);
 
             _ = await Task.WhenAll(
                 ProfilePicture.TranslateTo(0, -60, 1100, Easing.CubicOut),
