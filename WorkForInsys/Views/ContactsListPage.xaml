@@ -16,6 +16,12 @@
             Command="{Binding AddContactCommand}"
             IconImageSource="icon_add_contact.xml"
             Text="Add"/>
+        <!--<ToolbarItem
+            BindingContext="{Binding Source={x:Reference collectionView}, Path=BindingContext}"
+            Command="{Binding DeleteContactCommand}"
+            CommandParameter="{Binding Source={x:Reference CurrentSelection}, Path=BindingContext.collectionView}"
+            IconImageSource="icon_delete.xml"
+            Text="Delete"/>-->
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
@@ -37,15 +43,30 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="WorkForInsys.Models:ContactModel">
                         <StackLayout Padding="10">
-                            <Frame>
-                                <StackLayout>
-                                    <StackLayout Orientation="Horizontal">
-                                        <Label Text="{x:Binding Name}"/>
-                                        <Label Text="{x:Binding Surname}"/>
+                            <Frame CornerRadius="0">
+                                <Grid>
+                                    <StackLayout>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="{x:Binding Name}"/>
+                                            <Label Text="{x:Binding Surname}"/>
+                                        </StackLayout>
+
+                                        <Label Text="{x:Binding PhoneNumber}"/>
+
+                                        <Label Text="{x:Binding ID}"/>
                                     </StackLayout>
 
-                                    <Label Text="{x:Binding PhoneNumber}"/>
-                                </StackLayout>
+                                    <ImageButton
+                                        BackgroundColor="White"
+                                        BindingContext="{Binding Source={x:Reference collectionView}, Path=BindingContext}"
+                                        Command="{Binding Source={x:Reference collectionView}, Path=BindingContext}"
+                                        CommandParameter="{x:Binding ID}"
+                                        HeightRequest="32"
+                                        HorizontalOptions="EndAndExpand"
+                                        Source="icon_delete.xml"
+                                        VerticalOptions="CenterAndExpand"
+                                        WidthRequest="32"/>
+                                </Grid>
                             </Frame>
                         </StackLayout>
                     </DataTemplate>

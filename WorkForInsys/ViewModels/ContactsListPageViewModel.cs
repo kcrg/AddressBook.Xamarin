@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using WorkForInsys.Models;
 using Xamarin.Forms;
+using WorkForInsys.Data;
 
 namespace WorkForInsys.ViewModels
 {
@@ -28,6 +29,7 @@ namespace WorkForInsys.ViewModels
 
         public ObservableCollection<ContactModel> ContactsList { get; private set; }
         public DelegateCommand AddContactCommand { get; private set; }
+        public DelegateCommand<string> DeleteContactCommand { get; set; }
         public DelegateCommand<IReadOnlyList<object>> ItemTappedCommand { get; private set; }
 
         public DelegateCommand LoadDatabase { get; private set; }
@@ -40,6 +42,16 @@ namespace WorkForInsys.ViewModels
             {
                 await Shell.Current.GoToAsync("contactlist/contactcreate");
             });
+
+            DeleteContactCommand = new DelegateCommand<string>(async (parameter) => 
+            {
+                parameter = parameter;
+                //int ID = Int32.Parse(parameter);
+                List<ContactModel> list = await App.Database.GetContactsAsync();
+                ContactModel contactToDelete = list.Find(x => x.ID == 1);
+                //await App.Database.DeleteContactAsync(contactToDelete);
+                ContactModel model = new ContactModel();
+            } );
 
             ItemTappedCommand = new DelegateCommand<IReadOnlyList<object>>(ShowDetails, (o) => !IsBlocked);
 
@@ -64,6 +76,17 @@ namespace WorkForInsys.ViewModels
         }
 
         public async void LoadData()
+        {
+            List<ContactModel> database = await App.Database.GetContactsAsync();
+            foreach (ContactModel contact in database)
+            {
+                ContactsList.Add(contact);
+            }
+
+            IsLoading = false;
+        }
+
+        public async void DeleteData(string o)
         {
             List<ContactModel> database = await App.Database.GetContactsAsync();
             foreach (ContactModel contact in database)
