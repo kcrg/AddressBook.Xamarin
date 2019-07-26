@@ -16,12 +16,6 @@
             Command="{Binding AddContactCommand}"
             IconImageSource="icon_add_contact.xml"
             Text="Add"/>
-        <!--<ToolbarItem
-            BindingContext="{Binding Source={x:Reference collectionView}, Path=BindingContext}"
-            Command="{Binding DeleteContactCommand}"
-            CommandParameter="{Binding Source={x:Reference CurrentSelection}, Path=BindingContext.collectionView}"
-            IconImageSource="icon_delete.xml"
-            Text="Delete"/>-->
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
@@ -43,29 +37,55 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="WorkForInsys.Models:ContactModel">
                         <StackLayout Padding="10">
-                            <Frame CornerRadius="0">
+                            <Frame Padding="5" CornerRadius="0">
                                 <Grid>
-                                    <StackLayout>
-                                        <StackLayout Orientation="Horizontal">
-                                            <Label Text="{x:Binding Name}"/>
-                                            <Label Text="{x:Binding Surname}"/>
-                                        </StackLayout>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="76*"/>
+                                        <ColumnDefinition Width="12*"/>
+                                        <ColumnDefinition Width="12*"/>
+                                    </Grid.ColumnDefinitions>
 
-                                        <Label Text="{x:Binding PhoneNumber}"/>
-
-                                        <Label Text="{x:Binding ID}"/>
+                                    <StackLayout
+                                        Grid.Column="0"
+                                        Margin="12,0,0,0"
+                                        Orientation="Horizontal">
+                                        <Label
+                                            FontFamily="Lato-Bold.ttf#Lato-Bold"
+                                            FontSize="12"
+                                            Text="{x:Binding Name}"
+                                            TextColor="Black"
+                                            VerticalOptions="Center"/>
+                                        <Label
+                                            FontFamily="Lato-Bold.ttf#Lato-Bold"
+                                            FontSize="12"
+                                            Text="{x:Binding Surname}"
+                                            TextColor="Black"
+                                            VerticalOptions="Center"/>
                                     </StackLayout>
 
                                     <ImageButton
+                                        Grid.Column="1"
+                                        Padding="10"
                                         BackgroundColor="White"
-                                        BindingContext="{Binding Source={x:Reference collectionView}, Path=BindingContext}"
-                                        Command="{Binding Source={x:Reference collectionView}, Path=BindingContext}"
-                                        CommandParameter="{x:Binding ID}"
-                                        HeightRequest="32"
+                                        Clicked="EditContact"
+                                        CommandParameter="{Binding ID}"
+                                        HeightRequest="42"
                                         HorizontalOptions="EndAndExpand"
+                                        Source="icon_create.xml"
+                                        VerticalOptions="CenterAndExpand"
+                                        WidthRequest="42"/>
+
+                                    <ImageButton
+                                        Grid.Column="2"
+                                        Padding="10"
+                                        BackgroundColor="White"
+                                        Clicked="DeleteContact"
+                                        CommandParameter="{Binding ID}"
+                                        HeightRequest="42"
+                                        HorizontalOptions="CenterAndExpand"
                                         Source="icon_delete.xml"
                                         VerticalOptions="CenterAndExpand"
-                                        WidthRequest="32"/>
+                                        WidthRequest="42"/>
                                 </Grid>
                             </Frame>
                         </StackLayout>

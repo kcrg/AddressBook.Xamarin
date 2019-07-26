@@ -39,16 +39,20 @@
 
                 <Entry
                     BackgroundColor="White"
+                    Keyboard="Telephone"
                     Placeholder="Phone number"
                     Text="{Binding PhoneNumber}"/>
                 <Entry
                     BackgroundColor="White"
+                    Keyboard="Email"
                     Placeholder="E-mail"
                     Text="{Binding Email}"/>
                 <Entry
                     BackgroundColor="White"
                     Placeholder="Address"
                     Text="{Binding Address}"/>
+
+                <Label Text="{Binding ValidateMessage}" TextColor="Red"/>
             </StackLayout>
         </Grid>
     </ContentPage.Content>

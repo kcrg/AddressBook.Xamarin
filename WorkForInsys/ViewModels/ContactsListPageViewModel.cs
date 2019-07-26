@@ -6,7 +6,6 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using WorkForInsys.Models;
 using Xamarin.Forms;
-using WorkForInsys.Data;
 
 namespace WorkForInsys.ViewModels
 {
@@ -43,16 +42,6 @@ namespace WorkForInsys.ViewModels
                 await Shell.Current.GoToAsync("contactlist/contactcreate");
             });
 
-            DeleteContactCommand = new DelegateCommand<string>(async (parameter) => 
-            {
-                parameter = parameter;
-                //int ID = Int32.Parse(parameter);
-                List<ContactModel> list = await App.Database.GetContactsAsync();
-                ContactModel contactToDelete = list.Find(x => x.ID == 1);
-                //await App.Database.DeleteContactAsync(contactToDelete);
-                ContactModel model = new ContactModel();
-            } );
-
             ItemTappedCommand = new DelegateCommand<IReadOnlyList<object>>(ShowDetails, (o) => !IsBlocked);
 
             LoadDatabase = new DelegateCommand(LoadData);
@@ -69,25 +58,15 @@ namespace WorkForInsys.ViewModels
             {
                 throw new ArgumentException("Given contact is null");
             }
-
             string Message = $"{contact[0].Name} {contact[0].Surname}\nPhone number: {contact[0].PhoneNumber}\nE-mail: {contact[0].Email}\nAddress: {contact[0].Address}";
+
             IsBlocked = false;
             UserDialogs.Instance.AlertAsync(Message, "Details", "Close");
         }
 
         public async void LoadData()
         {
-            List<ContactModel> database = await App.Database.GetContactsAsync();
-            foreach (ContactModel contact in database)
-            {
-                ContactsList.Add(contact);
-            }
-
-            IsLoading = false;
-        }
-
-        public async void DeleteData(string o)
-        {
+            ContactsList.Clear();
             List<ContactModel> database = await App.Database.GetContactsAsync();
             foreach (ContactModel contact in database)
             {

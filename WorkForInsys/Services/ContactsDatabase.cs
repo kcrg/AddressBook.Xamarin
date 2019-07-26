@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using WorkForInsys.Models;
 
-namespace WorkForInsys.Data
+namespace WorkForInsys.Services
 {
     public class ContactsDatabase // move to services
     {
