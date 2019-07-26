@@ -5,7 +5,7 @@
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
-    Title="Add"
+    Title="Add/Edit"
     prism:ViewModelLocator.AutowireViewModel="True"
     Visual="Material"
     mc:Ignorable="d">
@@ -18,6 +18,13 @@
 
     <ContentPage.Content>
         <Grid Padding="20">
+            <Label x:Name="IDLabel" Style="{StaticResource ListLabel}"
+                Margin="0,25,0,0"
+                FontSize="24"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                Text="{Binding ID, Mode=OneWayToSource}"
+                VerticalOptions="Start"/>
             <StackLayout VerticalOptions="Center">
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -53,9 +60,6 @@
                     Text="{Binding Address}"/>
 
                 <Label Text="{Binding ValidateMessage}" TextColor="Red"/>
-                <Label x:Name="IDLabel"
-                    Text="{Binding ID, Mode=OneWayToSource}"
-                    TextColor="Red"/>
             </StackLayout>
         </Grid>
     </ContentPage.Content>

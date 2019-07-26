@@ -1,6 +1,5 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using WorkForInsys.Models;
 using WorkForInsys.ViewModels;
 using Xamarin.Forms;
@@ -36,8 +35,8 @@ namespace WorkForInsys.Views
             ImageButton btn = (ImageButton)sender;
 
             int ID = int.Parse(btn.CommandParameter.ToString());
-            List<ContactModel> list = await App.Database.GetContactsAsync();
-            ContactModel contactToDelete = list.Find(x => x.ID == ID);
+            ContactModel contactToDelete = await App.Database.GetContactAsync(ID);
+
             await App.Database.DeleteContactAsync(contactToDelete);
 
             LoadDatabase();
@@ -48,10 +47,9 @@ namespace WorkForInsys.Views
             ImageButton btn = (ImageButton)sender;
 
             int ID = int.Parse(btn.CommandParameter.ToString());
-            List<ContactModel> list = await App.Database.GetContactsAsync();
-            ContactModel contact = list.Find(x => x.ID == ID);
+            ContactModel contactToEdit = await App.Database.GetContactAsync(ID);
 
-            string contactJson = JsonConvert.SerializeObject(contact);
+            string contactJson = JsonConvert.SerializeObject(contactToEdit);
 
             await Shell.Current.GoToAsync($"contactlist/contactcreate?entry={contactJson}");
         }

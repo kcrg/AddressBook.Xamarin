@@ -48,7 +48,7 @@ namespace WorkForInsys
             // Get Metrics
             DisplayInfo mainDisplayInfo = DeviceDisplay.MainDisplayInfo;
 
-            // Get resolution 
+            // Get Resolution 
             double width = mainDisplayInfo.Width;
             double height = mainDisplayInfo.Height;
 
@@ -68,7 +68,6 @@ namespace WorkForInsys
 
             Routing.RegisterRoute("contactlist", typeof(ContactsListPage));
             Routing.RegisterRoute("contactlist/contactcreate", typeof(ContactCreatePage));
-            Routing.RegisterRoute("contactlist/contactedit", typeof(ContactEditPage));
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)

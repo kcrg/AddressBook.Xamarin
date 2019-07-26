@@ -27,14 +27,20 @@ namespace WorkForInsys.Views
 
             if (Json != null)
             {
+                Title = "Edit";
                 ContactModel contactToEdit = JsonConvert.DeserializeObject<ContactModel>(Json);
 
-                IDLabel.Text = contactToEdit.ID.ToString();
+                IDLabel.Text = $"You are changing contact \nwith ID {contactToEdit.ID.ToString()}.";
                 NameEntry.Text = contactToEdit.Name;
                 SurnameEntry.Text = contactToEdit.Surname;
                 PhoneEntry.Text = contactToEdit.PhoneNumber;
                 EmailEntry.Text = contactToEdit.Email;
                 AddressEntry.Text = contactToEdit.Address;
+            }
+            else
+            {
+                Title = "Add";
+                IDLabel.Text = "You are adding a new contact.";
             }
         }
     }

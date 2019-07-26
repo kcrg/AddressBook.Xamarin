@@ -80,7 +80,7 @@
                             <Label Style="{StaticResource ListEmptyViewLabel}" Text="There is no contacts to show."/>
                             <Label Style="{StaticResource ListEmptyViewLabel}"
                                 FontSize="14"
-                                Text="Try add new one!"/>
+                                Text="Try add a new one!"/>
                         </StackLayout>
                     </Grid>
                 </CollectionView.EmptyView>

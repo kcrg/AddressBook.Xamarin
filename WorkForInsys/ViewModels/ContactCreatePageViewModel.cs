@@ -32,7 +32,13 @@ namespace WorkForInsys.ViewModels
 
         public async void AddContact()
         {
-            if (!IsEmpty(Name) || !IsEmpty(Surname) || !IsEmpty(PhoneNumber) || !IsEmpty(Email) || !IsEmpty(Address) || !IsEmail(Email) || !IsNumber(PhoneNumber))
+            if (!IsEmpty(Name) ||
+                !IsEmpty(Surname) ||
+                !IsEmpty(PhoneNumber) ||
+                !IsEmpty(Email) ||
+                !IsEmpty(Address) ||
+                !IsEmail(Email) ||
+                !IsNumber(PhoneNumber))
             {
                 ValidateMessage = "Please complete all fields correctly.";
             }

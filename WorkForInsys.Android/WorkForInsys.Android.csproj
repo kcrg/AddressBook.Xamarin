@@ -58,7 +58,6 @@
     <AndroidSupportedAbis>arm64-v8a</AndroidSupportedAbis>
     <AndroidDexTool>d8</AndroidDexTool>
     <AndroidLinkTool>r8</AndroidLinkTool>
-    <AndroidUseAapt2>true</AndroidUseAapt2>
     <AndroidEnableProfiledAot>true</AndroidEnableProfiledAot>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
   </PropertyGroup>
@@ -112,7 +111,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Lato-Regular.ttf" />
     <AndroidAsset Include="Assets\Lato-Semibold.ttf" />
     <AndroidAsset Include="Assets\Lato-Bold.ttf" />
     <None Include="Resources\AboutResources.txt" />

@@ -35,7 +35,6 @@ namespace WorkForInsys.ViewModels
                 await Shell.Current.GoToAsync("contactlist/contactcreate");
             });
 
-            //ItemTappedCommand = new DelegateCommand<IReadOnlyList<object>>(ShowDetails, (o) => !IsBlocked);
             ItemTappedCommand = new DelegateCommand<IReadOnlyList<object>>((o) =>
             {
                 ShowDetails(o, dialogService);
