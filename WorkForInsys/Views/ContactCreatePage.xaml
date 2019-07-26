@@ -25,34 +25,37 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
-                    <Entry
+                    <Entry x:Name="NameEntry"
                         Grid.Column="0"
                         BackgroundColor="White"
                         Placeholder="Name"
                         Text="{Binding Name}"/>
-                    <Entry
+                    <Entry x:Name="SurnameEntry"
                         Grid.Column="1"
                         BackgroundColor="White"
                         Placeholder="Surname"
                         Text="{Binding Surname}"/>
                 </Grid>
 
-                <Entry
+                <Entry x:Name="PhoneEntry"
                     BackgroundColor="White"
                     Keyboard="Telephone"
                     Placeholder="Phone number"
                     Text="{Binding PhoneNumber}"/>
-                <Entry
+                <Entry x:Name="EmailEntry"
                     BackgroundColor="White"
                     Keyboard="Email"
                     Placeholder="E-mail"
                     Text="{Binding Email}"/>
-                <Entry
+                <Entry x:Name="AddressEntry"
                     BackgroundColor="White"
                     Placeholder="Address"
                     Text="{Binding Address}"/>
 
                 <Label Text="{Binding ValidateMessage}" TextColor="Red"/>
+                <Label x:Name="IDLabel"
+                    Text="{Binding ID, Mode=OneWayToSource}"
+                    TextColor="Red"/>
             </StackLayout>
         </Grid>
     </ContentPage.Content>

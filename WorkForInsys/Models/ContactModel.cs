@@ -4,7 +4,7 @@ namespace WorkForInsys.Models
 {
     public class ContactModel
     {
-        [PrimaryKey, AutoIncrement]
+        [PrimaryKey, AutoIncrement, Indexed]
         public int ID { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }

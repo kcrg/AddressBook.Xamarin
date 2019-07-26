@@ -5,7 +5,7 @@ using WorkForInsys.Models;
 
 namespace WorkForInsys.Services
 {
-    public class ContactsDatabase // move to services
+    public class ContactsDatabase
     {
         private readonly SQLiteAsyncConnection _database;
 

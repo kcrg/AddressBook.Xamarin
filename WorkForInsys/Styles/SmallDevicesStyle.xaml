@@ -1,0 +1,10 @@
+﻿<ResourceDictionary
+    x:Class="WorkForInsys.Styles.SmallDevicesStyle"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Style x:Key="ActivityIndicator" TargetType="ActivityIndicator">
+        <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+        <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+    </Style>
+</ResourceDictionary>

@@ -20,12 +20,10 @@
 
     <ContentPage.Content>
         <Grid>
-            <ActivityIndicator
-                HorizontalOptions="CenterAndExpand"
-                IsRunning="{Binding IsLoading}"
-                VerticalOptions="CenterAndExpand"/>
+            <ActivityIndicator IsRunning="{Binding IsLoading}" Style="{StaticResource ActivityIndicator}"/>
 
             <CollectionView x:Name="collectionView"
+                ItemSizingStrategy="MeasureFirstItem"
                 ItemsSource="{Binding ContactsList}"
                 SelectionMode="Single">
                 <CollectionView.Behaviors>
@@ -37,7 +35,7 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="WorkForInsys.Models:ContactModel">
                         <StackLayout Padding="10">
-                            <Frame Padding="5" CornerRadius="0">
+                            <Frame Padding="8" CornerRadius="0">
                                 <Grid>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="76*"/>
@@ -45,47 +43,32 @@
                                         <ColumnDefinition Width="12*"/>
                                     </Grid.ColumnDefinitions>
 
-                                    <StackLayout
-                                        Grid.Column="0"
-                                        Margin="12,0,0,0"
-                                        Orientation="Horizontal">
-                                        <Label
-                                            FontFamily="Lato-Bold.ttf#Lato-Bold"
-                                            FontSize="12"
-                                            Text="{x:Binding Name}"
-                                            TextColor="Black"
-                                            VerticalOptions="Center"/>
-                                        <Label
-                                            FontFamily="Lato-Bold.ttf#Lato-Bold"
-                                            FontSize="12"
-                                            Text="{x:Binding Surname}"
-                                            TextColor="Black"
-                                            VerticalOptions="Center"/>
+                                    <StackLayout Grid.Column="0" Margin="12,0,0,0">
+                                        <Label Style="{StaticResource ListLabel}">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="{x:Binding Name}"/>
+                                                    <Span Text=" "/>
+                                                    <Span Text="{x:Binding Surname}"/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                        <Label Style="{StaticResource ListLabel}"
+                                            Text="{x:Binding PhoneNumber}"
+                                            TextColor="DarkGray"/>
                                     </StackLayout>
 
-                                    <ImageButton
+                                    <ImageButton Style="{StaticResource ListImageButton}"
                                         Grid.Column="1"
-                                        Padding="10"
-                                        BackgroundColor="White"
                                         Clicked="EditContact"
                                         CommandParameter="{Binding ID}"
-                                        HeightRequest="42"
-                                        HorizontalOptions="EndAndExpand"
-                                        Source="icon_create.xml"
-                                        VerticalOptions="CenterAndExpand"
-                                        WidthRequest="42"/>
+                                        Source="icon_create.xml"/>
 
-                                    <ImageButton
+                                    <ImageButton Style="{StaticResource ListImageButton}"
                                         Grid.Column="2"
-                                        Padding="10"
-                                        BackgroundColor="White"
                                         Clicked="DeleteContact"
                                         CommandParameter="{Binding ID}"
-                                        HeightRequest="42"
-                                        HorizontalOptions="CenterAndExpand"
-                                        Source="icon_delete.xml"
-                                        VerticalOptions="CenterAndExpand"
-                                        WidthRequest="42"/>
+                                        Source="icon_delete.xml"/>
                                 </Grid>
                             </Frame>
                         </StackLayout>
@@ -94,18 +77,10 @@
                 <CollectionView.EmptyView>
                     <Grid>
                         <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-                            <Label
-                                FontFamily="Lato-Bold.ttf#Lato-Bold"
-                                FontSize="18"
-                                HorizontalTextAlignment="Center"
-                                Text="There is no contacts to show."
-                                TextColor="DarkGray"/>
-                            <Label
-                                FontFamily="Lato-Semibold.ttf#Lato-Semibold"
+                            <Label Style="{StaticResource ListEmptyViewLabel}" Text="There is no contacts to show."/>
+                            <Label Style="{StaticResource ListEmptyViewLabel}"
                                 FontSize="14"
-                                HorizontalTextAlignment="Center"
-                                Text="Try add new one!"
-                                TextColor="DarkGray"/>
+                                Text="Try add new one!"/>
                         </StackLayout>
                     </Grid>
                 </CollectionView.EmptyView>

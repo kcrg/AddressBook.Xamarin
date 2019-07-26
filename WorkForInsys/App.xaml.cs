@@ -3,8 +3,10 @@ using Prism.Ioc;
 using System;
 using System.IO;
 using WorkForInsys.Services;
+using WorkForInsys.Styles;
 using WorkForInsys.ViewModels;
 using WorkForInsys.Views;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,8 +15,10 @@ namespace WorkForInsys
 {
     public partial class App
     {
-        private static ContactsDatabase database;
+        private const int smallWightResolution = 768;
+        private const int smallHeightResolution = 1280;
 
+        private static ContactsDatabase database;
         public static ContactsDatabase Database
         {
             get
@@ -27,6 +31,30 @@ namespace WorkForInsys
             }
         }
 
+        private void LoadStyles()
+        {
+            if (IsASmallDevice())
+            {
+                dictionary.MergedDictionaries.Add(SmallDevicesStyle.SharedInstance);
+            }
+            else
+            {
+                dictionary.MergedDictionaries.Add(GeneralDevicesStyle.SharedInstance);
+            }
+        }
+
+        public static bool IsASmallDevice()
+        {
+            // Get Metrics
+            DisplayInfo mainDisplayInfo = DeviceDisplay.MainDisplayInfo;
+
+            // Get resolution 
+            double width = mainDisplayInfo.Width;
+            double height = mainDisplayInfo.Height;
+
+            return (width <= smallWightResolution && height <= smallHeightResolution);
+        }
+
         public App() : this(null) { }
 
         public App(IPlatformInitializer initializer) : base(initializer) { }
@@ -34,11 +62,13 @@ namespace WorkForInsys
         protected override void OnInitialized()
         {
             InitializeComponent();
+            LoadStyles();
 
             MainPage = new AppShell();
 
             Routing.RegisterRoute("contactlist", typeof(ContactsListPage));
             Routing.RegisterRoute("contactlist/contactcreate", typeof(ContactCreatePage));
+            Routing.RegisterRoute("contactlist/contactedit", typeof(ContactEditPage));
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)

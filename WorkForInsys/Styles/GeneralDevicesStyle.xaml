@@ -1,0 +1,33 @@
+﻿<ResourceDictionary
+    x:Class="WorkForInsys.Styles.GeneralDevicesStyle"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Style x:Key="ActivityIndicator" TargetType="ActivityIndicator">
+        <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+        <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+    </Style>
+
+    <Style x:Key="ListLabel" TargetType="Label">
+        <Setter Property="VerticalOptions" Value="Center"/>
+        <Setter Property="TextColor" Value="Black"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="FontFamily" Value="Lato-Bold.ttf#Lato-Bold"/>
+    </Style>
+
+    <Style x:Key="ListImageButton" TargetType="ImageButton">
+        <Setter Property="Padding" Value="10"/>
+        <Setter Property="BackgroundColor" Value="White"/>
+        <Setter Property="HeightRequest" Value="42"/>
+        <Setter Property="WidthRequest" Value="42"/>
+        <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+        <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+    </Style>
+
+    <Style x:Key="ListEmptyViewLabel" TargetType="Label">
+        <Setter Property="HorizontalTextAlignment" Value="Center"/>
+        <Setter Property="TextColor" Value="DarkGray"/>
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="FontFamily" Value="Lato-Semibold.ttf#Lato-Semibold"/>
+    </Style>
+</ResourceDictionary>

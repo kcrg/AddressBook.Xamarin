@@ -1,6 +1,6 @@
-﻿using Acr.UserDialogs;
-using Prism.Commands;
+﻿using Prism.Commands;
 using Prism.Mvvm;
+using Prism.Services;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -12,18 +12,11 @@ namespace WorkForInsys.ViewModels
     public class ContactsListPageViewModel : BindableBase
     {
         private bool _isLoading = true;
-        private bool _isBlocked;
 
         public bool IsLoading
         {
             get => _isLoading;
             set => SetProperty(ref _isLoading, value);
-        }
-
-        public bool IsBlocked
-        {
-            get => _isBlocked;
-            set => SetProperty(ref _isBlocked, value);
         }
 
         public ObservableCollection<ContactModel> ContactsList { get; private set; }
@@ -33,7 +26,7 @@ namespace WorkForInsys.ViewModels
 
         public DelegateCommand LoadDatabase { get; private set; }
 
-        public ContactsListPageViewModel()
+        public ContactsListPageViewModel(IPageDialogService dialogService)
         {
             ContactsList = new ObservableCollection<ContactModel>();
 
@@ -42,15 +35,17 @@ namespace WorkForInsys.ViewModels
                 await Shell.Current.GoToAsync("contactlist/contactcreate");
             });
 
-            ItemTappedCommand = new DelegateCommand<IReadOnlyList<object>>(ShowDetails, (o) => !IsBlocked);
+            //ItemTappedCommand = new DelegateCommand<IReadOnlyList<object>>(ShowDetails, (o) => !IsBlocked);
+            ItemTappedCommand = new DelegateCommand<IReadOnlyList<object>>((o) =>
+            {
+                ShowDetails(o, dialogService);
+            });
 
             LoadDatabase = new DelegateCommand(LoadData);
         }
 
-        public void ShowDetails(IReadOnlyList<object> obj)
+        public async void ShowDetails(IReadOnlyList<object> obj, IPageDialogService dialogService)
         {
-            IsBlocked = true;
-
             List<object> list = (List<object>)obj;
             ContactModel[] contact = list.ConvertAll(item => (ContactModel)item).ToArray();
 
@@ -60,8 +55,7 @@ namespace WorkForInsys.ViewModels
             }
             string Message = $"{contact[0].Name} {contact[0].Surname}\nPhone number: {contact[0].PhoneNumber}\nE-mail: {contact[0].Email}\nAddress: {contact[0].Address}";
 
-            IsBlocked = false;
-            UserDialogs.Instance.AlertAsync(Message, "Details", "Close");
+            await dialogService.DisplayAlertAsync("Details", Message, "Close");
         }
 
         public async void LoadData()

@@ -17,7 +17,7 @@
                 VerticalOptions="Start"/>
 
             <Image x:Name="ProfilePicture"
-                Margin="0,200,0,0"
+                Margin="0,170,0,0"
                 HeightRequest="112"
                 HorizontalOptions="CenterAndExpand"
                 IsOpaque="True"
@@ -28,6 +28,7 @@
 
             <StackLayout x:Name="DescriptionPanel"
                 Opacity="0"
+                         Margin="0,65,0,0"
                 VerticalOptions="Center">
                 <Label
                     FontFamily="Lato-Bold.ttf#Lato-Bold"

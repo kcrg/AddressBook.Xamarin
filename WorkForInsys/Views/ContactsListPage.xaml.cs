@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using WorkForInsys.Models;
 using WorkForInsys.ViewModels;
@@ -42,9 +43,17 @@ namespace WorkForInsys.Views
             LoadDatabase();
         }
 
-        private void EditContact(object sender, EventArgs e)
+        private async void EditContact(object sender, EventArgs e)
         {
+            ImageButton btn = (ImageButton)sender;
 
+            int ID = int.Parse(btn.CommandParameter.ToString());
+            List<ContactModel> list = await App.Database.GetContactsAsync();
+            ContactModel contact = list.Find(x => x.ID == ID);
+
+            string contactJson = JsonConvert.SerializeObject(contact);
+
+            await Shell.Current.GoToAsync($"contactlist/contactcreate?entry={contactJson}");
         }
     }
 }

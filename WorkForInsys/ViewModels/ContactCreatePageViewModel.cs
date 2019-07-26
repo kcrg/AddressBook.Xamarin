@@ -9,6 +9,8 @@ namespace WorkForInsys.ViewModels
     public class ContactCreatePageViewModel : BindableBase
     {
         public string _validateMessage;
+
+        public int ID { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
         public string PhoneNumber { get; set; }
@@ -38,6 +40,7 @@ namespace WorkForInsys.ViewModels
             {
                 ContactModel contact = new ContactModel()
                 {
+                    ID = ID,
                     Name = Name,
                     Surname = Surname,
                     PhoneNumber = PhoneNumber,
@@ -76,12 +79,12 @@ namespace WorkForInsys.ViewModels
 
         public bool IsNumber(string value)
         {
-            if (value == null)
+            if (value == null && value.Length != 9)
             {
                 return false;
             }
 
-            Regex regex = new Regex(@"^\d$");
+            Regex regex = new Regex(@"^[0-9]+$");
             Match match = regex.Match(value);
 
             return match.Success;
