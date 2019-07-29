@@ -30,7 +30,7 @@ namespace WorkForInsys.Views
                 Title = "Edit";
                 ContactModel contactToEdit = JsonConvert.DeserializeObject<ContactModel>(Json);
 
-                IDLabel.Text = $"You are changing contact \nwith ID {contactToEdit.ID.ToString()}.";
+                IDLabel.Text = contactToEdit.ID.ToString();
                 NameEntry.Text = contactToEdit.Name;
                 SurnameEntry.Text = contactToEdit.Surname;
                 PhoneEntry.Text = contactToEdit.PhoneNumber;
@@ -40,7 +40,7 @@ namespace WorkForInsys.Views
             else
             {
                 Title = "Add";
-                IDLabel.Text = "You are adding a new contact.";
+                welcomeLabel.Text = "You are adding a new contact.";
             }
         }
     }

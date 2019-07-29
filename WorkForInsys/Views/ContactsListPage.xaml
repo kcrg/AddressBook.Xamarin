@@ -77,10 +77,14 @@
                 <CollectionView.EmptyView>
                     <Grid>
                         <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-                            <Label Style="{StaticResource ListEmptyViewLabel}" Text="There is no contacts to show."/>
-                            <Label Style="{StaticResource ListEmptyViewLabel}"
-                                FontSize="14"
-                                Text="Try add a new one!"/>
+                            <Label Style="{StaticResource ListEmptyViewLabel}">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="There is no contacts to show.&#x0a;"/>
+                                        <Span FontSize="14" Text="Try add a new one!"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
                         </StackLayout>
                     </Grid>
                 </CollectionView.EmptyView>

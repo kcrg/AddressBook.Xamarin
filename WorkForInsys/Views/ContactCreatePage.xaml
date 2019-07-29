@@ -18,13 +18,21 @@
 
     <ContentPage.Content>
         <Grid Padding="20">
-            <Label x:Name="IDLabel" Style="{StaticResource ListLabel}"
+            <Label x:Name="welcomeLabel" Style="{StaticResource ListLabel}"
                 Margin="0,25,0,0"
                 FontSize="24"
                 HorizontalOptions="Center"
                 HorizontalTextAlignment="Center"
                 Text="{Binding ID, Mode=OneWayToSource}"
-                VerticalOptions="Start"/>
+                VerticalOptions="Start">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="You are changing contact&#x0a;with ID "/>
+                        <Span x:Name="IDLabel" Text="{Binding ID, Mode=OneWayToSource}"/>
+                        <Span Text="."/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
             <StackLayout VerticalOptions="Center">
                 <Grid>
                     <Grid.ColumnDefinitions>
