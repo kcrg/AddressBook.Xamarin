@@ -2,16 +2,16 @@
 using Prism.Ioc;
 using System;
 using System.IO;
-using WorkForInsys.Services;
-using WorkForInsys.Styles;
-using WorkForInsys.ViewModels;
-using WorkForInsys.Views;
+using AddressBook.Services;
+using AddressBook.Styles;
+using AddressBook.ViewModels;
+using AddressBook.Views;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
-namespace WorkForInsys
+namespace AddressBook
 {
     public partial class App
     {

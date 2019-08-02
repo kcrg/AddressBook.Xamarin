@@ -1,11 +1,11 @@
 ﻿using Newtonsoft.Json;
 using System;
-using WorkForInsys.Models;
-using WorkForInsys.ViewModels;
+using AddressBook.Models;
+using AddressBook.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace WorkForInsys.Views
+namespace AddressBook.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ContactsListPage : ContentPage

@@ -1,10 +1,10 @@
 ﻿using Prism.Commands;
 using Prism.Mvvm;
 using System.Text.RegularExpressions;
-using WorkForInsys.Models;
+using AddressBook.Models;
 using Xamarin.Forms;
 
-namespace WorkForInsys.ViewModels
+namespace AddressBook.ViewModels
 {
     public class ContactCreatePageViewModel : BindableBase
     {

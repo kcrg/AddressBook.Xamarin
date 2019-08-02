@@ -1,9 +1,9 @@
 ﻿using SQLite;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using WorkForInsys.Models;
+using AddressBook.Models;
 
-namespace WorkForInsys.Services
+namespace AddressBook.Services
 {
     public class ContactsDatabase
     {

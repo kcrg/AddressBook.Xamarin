@@ -1,7 +1,7 @@
 ﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace WorkForInsys.Views
+namespace AddressBook.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AppShell : Shell

@@ -1,6 +1,6 @@
 ﻿using SQLite;
 
-namespace WorkForInsys.Models
+namespace AddressBook.Models
 {
     public class ContactModel
     {

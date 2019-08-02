@@ -1,10 +1,10 @@
 ﻿using Newtonsoft.Json;
 using System;
-using WorkForInsys.Models;
+using AddressBook.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace WorkForInsys.Views
+namespace AddressBook.Views
 {
     [QueryProperty("Entry", "entry")]
     [XamlCompilation(XamlCompilationOptions.Compile)]

@@ -8,7 +8,7 @@ using Prism.Ioc;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
-namespace WorkForInsys.Droid
+namespace AddressBook.Droid
 {
     [Activity(MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation, ScreenOrientation = ScreenOrientation.Portrait)]
     public class MainActivity : Xamarin.Forms.Platform.Android.FormsAppCompatActivity

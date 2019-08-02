@@ -4,7 +4,7 @@ using Prism.Mvvm;
 using System;
 using Xamarin.Essentials;
 
-namespace WorkForInsys.ViewModels
+namespace AddressBook.ViewModels
 {
     public class AboutPageViewModel : BindableBase
     {

@@ -4,10 +4,10 @@ using Prism.Services;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using WorkForInsys.Models;
+using AddressBook.Models;
 using Xamarin.Forms;
 
-namespace WorkForInsys.ViewModels
+namespace AddressBook.ViewModels
 {
     public class ContactsListPageViewModel : BindableBase
     {

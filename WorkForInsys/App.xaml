@@ -1,5 +1,5 @@
 ﻿<prism:PrismApplication
-    x:Class="WorkForInsys.App"
+    x:Class="AddressBook.App"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:prism="clr-namespace:Prism.DryIoc;assembly=Prism.DryIoc.Forms">

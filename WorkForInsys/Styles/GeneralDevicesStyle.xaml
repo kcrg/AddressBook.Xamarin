@@ -1,5 +1,5 @@
 ﻿<ResourceDictionary
-    x:Class="WorkForInsys.Styles.GeneralDevicesStyle"
+    x:Class="AddressBook.Styles.GeneralDevicesStyle"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 

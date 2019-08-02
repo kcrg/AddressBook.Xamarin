@@ -9,8 +9,8 @@
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WorkForInsys.Droid</RootNamespace>
-    <AssemblyName>WorkForInsys.Android</AssemblyName>
+    <RootNamespace>AddressBook.Droid</RootNamespace>
+    <AssemblyName>AddressBook.Android</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
@@ -127,9 +127,9 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WorkForInsys\WorkForInsys.csproj">
-      <Project>{A682884C-CB44-4A89-B752-27BB634E0ABE}</Project>
-      <Name>WorkForInsys</Name>
+    <ProjectReference Include="..\WorkForInsys\AddressBook.csproj">
+      <Project>{AE58A014-540D-4828-92CD-E3CF30D5A68C}</Project>
+      <Name>AddressBook</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

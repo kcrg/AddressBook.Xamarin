@@ -1,8 +1,8 @@
 ﻿<ContentPage
-    x:Class="WorkForInsys.Views.ContactsListPage"
+    x:Class="AddressBook.Views.ContactsListPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:WorkForInsys.Models="clr-namespace:WorkForInsys.Models"
+    xmlns:AddressBook.Models="clr-namespace:AddressBook.Models"
     xmlns:b="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -33,7 +33,7 @@
                         EventName="SelectionChanged"/>
                 </CollectionView.Behaviors>
                 <CollectionView.ItemTemplate>
-                    <DataTemplate x:DataType="WorkForInsys.Models:ContactModel">
+                    <DataTemplate x:DataType="AddressBook.Models:ContactModel">
                         <StackLayout Padding="10">
                             <Frame Padding="8" CornerRadius="0">
                                 <Grid>
