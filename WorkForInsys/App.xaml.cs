@@ -1,11 +1,11 @@
-﻿using Prism;
-using Prism.Ioc;
-using System;
-using System.IO;
-using AddressBook.Services;
+﻿using AddressBook.Services;
 using AddressBook.Styles;
 using AddressBook.ViewModels;
 using AddressBook.Views;
+using Prism;
+using Prism.Ioc;
+using System;
+using System.IO;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;

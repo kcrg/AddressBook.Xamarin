@@ -1,7 +1,7 @@
-﻿using Prism.Commands;
+﻿using AddressBook.Models;
+using Prism.Commands;
 using Prism.Mvvm;
 using System.Text.RegularExpressions;
-using AddressBook.Models;
 using Xamarin.Forms;
 
 namespace AddressBook.ViewModels

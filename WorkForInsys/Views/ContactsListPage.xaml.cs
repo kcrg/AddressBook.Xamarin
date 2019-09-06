@@ -1,7 +1,7 @@
-﻿using Newtonsoft.Json;
-using System;
-using AddressBook.Models;
+﻿using AddressBook.Models;
 using AddressBook.ViewModels;
+using Newtonsoft.Json;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 

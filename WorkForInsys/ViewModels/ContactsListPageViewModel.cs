@@ -1,10 +1,10 @@
-﻿using Prism.Commands;
+﻿using AddressBook.Models;
+using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Services;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using AddressBook.Models;
 using Xamarin.Forms;
 
 namespace AddressBook.ViewModels

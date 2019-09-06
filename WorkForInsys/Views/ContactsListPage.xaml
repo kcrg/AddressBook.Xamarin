@@ -1,5 +1,4 @@
-﻿<ContentPage
-    x:Class="AddressBook.Views.ContactsListPage"
+﻿<ContentPage x:Class="AddressBook.Views.ContactsListPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:AddressBook.Models="clr-namespace:AddressBook.Models"
