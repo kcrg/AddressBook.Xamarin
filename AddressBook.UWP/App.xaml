@@ -1,8 +1,4 @@
-﻿<Application
-    x:Class="AddressBook.UWP.App"
+﻿<Application x:Class="AddressBook.UWP.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:AddressBook.UWP"
-    RequestedTheme="Light">
-
-</Application>
+    xmlns:local="using:AddressBook.UWP"/>

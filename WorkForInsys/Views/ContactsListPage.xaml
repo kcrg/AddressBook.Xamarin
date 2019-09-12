@@ -11,10 +11,15 @@
     Visual="Material"
     mc:Ignorable="d">
     <ContentPage.ToolbarItems>
-        <ToolbarItem
-            Command="{Binding AddContactCommand}"
-            IconImageSource="icon_add_contact.xml"
-            Text="Add"/>
+        <ToolbarItem Command="{Binding AddContactCommand}" Text="Add">
+            <ToolbarItem.IconImageSource>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android" Value="icon_add_contact.xml"/>
+                    <On Platform="iOS" Value=""/>
+                    <On Platform="UWP" Value=""/>
+                </OnPlatform>
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>

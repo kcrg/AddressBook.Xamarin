@@ -8,13 +8,27 @@
     Shell.TitleColor="Black"
     Visual="Material">
     <TabBar>
-        <Tab Title="Contacts" Icon="icon_contacts_list.xml">
+        <Tab Title="Contacts">
+            <Tab.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android" Value="icon_contacts_list.xml"/>
+                    <On Platform="iOS" Value=""/>
+                    <On Platform="UWP" Value=""/>
+                </OnPlatform>
+            </Tab.Icon>
             <ShellContent>
                 <views:ContactsListPage/>
             </ShellContent>
         </Tab>
 
-        <Tab Title="About" Icon="icon_info.xml">
+        <Tab Title="About">
+            <Tab.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android" Value="icon_info.xml"/>
+                    <On Platform="iOS" Value=""/>
+                    <On Platform="UWP" Value=""/>
+                </OnPlatform>
+            </Tab.Icon>
             <ShellContent>
                 <views:AboutPage/>
             </ShellContent>
