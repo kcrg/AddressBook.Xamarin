@@ -42,27 +42,32 @@
                     <Entry x:Name="NameEntry"
                         Grid.Column="0"
                         BackgroundColor="White"
+                        ClearButtonVisibility="WhileEditing"
                         Placeholder="Name"
                         Text="{Binding Name}"/>
                     <Entry x:Name="SurnameEntry"
                         Grid.Column="1"
                         BackgroundColor="White"
+                        ClearButtonVisibility="WhileEditing"
                         Placeholder="Surname"
                         Text="{Binding Surname}"/>
                 </Grid>
 
                 <Entry x:Name="PhoneEntry"
                     BackgroundColor="White"
+                    ClearButtonVisibility="WhileEditing"
                     Keyboard="Telephone"
                     Placeholder="Phone number"
                     Text="{Binding PhoneNumber}"/>
                 <Entry x:Name="EmailEntry"
                     BackgroundColor="White"
+                    ClearButtonVisibility="WhileEditing"
                     Keyboard="Email"
                     Placeholder="E-mail"
                     Text="{Binding Email}"/>
                 <Entry x:Name="AddressEntry"
                     BackgroundColor="White"
+                    ClearButtonVisibility="WhileEditing"
                     Placeholder="Address"
                     Text="{Binding Address}"/>
 
