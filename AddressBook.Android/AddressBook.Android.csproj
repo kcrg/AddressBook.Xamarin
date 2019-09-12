@@ -127,7 +127,7 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WorkForInsys\AddressBook.csproj">
+    <ProjectReference Include="..\AddressBook\AddressBook.csproj">
       <Project>{AE58A014-540D-4828-92CD-E3CF30D5A68C}</Project>
       <Name>AddressBook</Name>
     </ProjectReference>

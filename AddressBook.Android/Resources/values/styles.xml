@@ -7,7 +7,7 @@
   </style>
 
   <style name="MainTheme" parent="MainTheme.Base">
-    <item name="android:statusBarColor">#ffffff</item>
+    <item name="android:statusBarColor">@color/colorPrimary</item>
     <item name="android:windowLightStatusBar">true</item>
   </style>
 
@@ -26,7 +26,8 @@
     <!-- colorAccent is used as the default value for colorControlActivated
          which is used to tint widgets -->
     <item name="colorAccent">@color/colorAccent</item>
-    <item name="android:windowLightNavigationBar">true</item>
+    <item name="android:windowLightNavigationBar">false</item>
+    <item name="android:navigationBarColor">@color/colorPrimary</item>
     <!-- You can also set colorControlNormal, colorControlActivated
          colorControlHighlight and colorSwitchThumbNormal. -->
     <item name="windowActionModeOverlay">true</item>
@@ -40,11 +41,18 @@
     <item name="android:colorFocusedHighlight">@color/ListViewSelected</item>
     <item name="android:colorActivatedHighlight">@color/ListViewSelected</item>
     <item name="android:activatedBackgroundIndicator">@color/ListViewSelected</item>
+
+    <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
   </style>
   <color name="ListViewSelected">#F0F0F0</color>
   <color name="ListViewHighlighted">#F0F0F0</color>
 
   <style name="AppCompatDialogStyle" parent="Theme.AppCompat.Light.Dialog">
     <item name="colorAccent">@color/colorAccent</item>
+  </style>
+
+  <style name="DrawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
+    <item name="spinBars">true</item>
+    <item name="color">@color/textColorPrimary</item>
   </style>
 </resources>
