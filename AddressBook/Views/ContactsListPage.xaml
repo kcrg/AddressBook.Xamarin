@@ -11,7 +11,7 @@
     Visual="Material"
     mc:Ignorable="d">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Command="{Binding AddContactCommand}" Text="Add">
+        <ToolbarItem Command="{x:Binding AddContactCommand}" Text="Add">
             <ToolbarItem.IconImageSource>
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="Android" Value="icon_add_contact.xml"/>
@@ -24,15 +24,15 @@
 
     <ContentPage.Content>
         <Grid>
-            <ActivityIndicator IsRunning="{Binding IsLoading}" Style="{StaticResource ActivityIndicator}"/>
+            <ActivityIndicator IsRunning="{x:Binding IsLoading}" Style="{StaticResource ActivityIndicator}"/>
 
             <CollectionView x:Name="collectionView"
                 ItemSizingStrategy="MeasureFirstItem"
-                ItemsSource="{Binding ContactsList}"
+                ItemsSource="{x:Binding ContactsList}"
                 SelectionMode="Single">
                 <CollectionView.Behaviors>
                     <b:EventToCommandBehavior
-                        Command="{Binding ItemTappedCommand}"
+                        Command="{x:Binding ItemTappedCommand}"
                         EventArgsParameterPath="CurrentSelection"
                         EventName="SelectionChanged"/>
                 </CollectionView.Behaviors>
@@ -65,13 +65,13 @@
                                     <ImageButton Style="{StaticResource ListImageButton}"
                                         Grid.Column="1"
                                         Clicked="EditContact"
-                                        CommandParameter="{Binding ID}"
+                                        CommandParameter="{x:Binding ID}"
                                         Source="icon_create.xml"/>
 
                                     <ImageButton Style="{StaticResource ListImageButton}"
                                         Grid.Column="2"
                                         Clicked="DeleteContact"
-                                        CommandParameter="{Binding ID}"
+                                        CommandParameter="{x:Binding ID}"
                                         Source="icon_delete.xml"/>
                                 </Grid>
                             </Frame>
@@ -80,16 +80,16 @@
                 </CollectionView.ItemTemplate>
                 <CollectionView.EmptyView>
                     <Grid>
-                        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-                            <Label Style="{StaticResource ListEmptyViewLabel}">
-                                <Label.FormattedText>
-                                    <FormattedString>
-                                        <Span Text="There is no contacts to show.&#x0a;"/>
-                                        <Span FontSize="14" Text="Try add a new one!"/>
-                                    </FormattedString>
-                                </Label.FormattedText>
-                            </Label>
-                        </StackLayout>
+                        <Label Style="{StaticResource ListEmptyViewLabel}"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="There is no contacts to show.&#x0a;"/>
+                                    <Span FontSize="14" Text="Try add a new one!"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
                     </Grid>
                 </CollectionView.EmptyView>
             </CollectionView>

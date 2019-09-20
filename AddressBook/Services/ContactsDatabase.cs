@@ -22,9 +22,7 @@ namespace AddressBook.Services
 
         public Task<ContactModel> GetContactAsync(int id)
         {
-            return _database.Table<ContactModel>()
-                            .Where(i => i.ID == id)
-                            .FirstOrDefaultAsync();
+            return _database.Table<ContactModel>().Where(i => i.ID == id).FirstOrDefaultAsync();
         }
 
         public Task<int> SaveContactAsync(ContactModel contact)

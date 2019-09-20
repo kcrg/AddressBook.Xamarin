@@ -31,7 +31,7 @@
                             <Span Text="Phone: "/>
                             <Span Text="+48 733 428 869" TextDecorations="Underline">
                                 <Span.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding PhoneTappedCommand}"/>
+                                    <TapGestureRecognizer Command="{x:Binding PhoneTappedCommand}"/>
                                 </Span.GestureRecognizers>
                             </Span>
                         </FormattedString>
@@ -46,7 +46,7 @@
                             <Span Text=" "/>
                             <Span Text="kacper@tryniecki.com" TextDecorations="Underline">
                                 <Span.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding EmailTappedCommand}"/>
+                                    <TapGestureRecognizer Command="{x:Binding EmailTappedCommand}"/>
                                 </Span.GestureRecognizers>
                             </Span>
                         </FormattedString>
@@ -55,7 +55,7 @@
             </StackLayout>
 
             <Button x:Name="GithubButton" Style="{StaticResource AboutButton}"
-                Command="{Binding OpenGithubCommand}"/>
+                Command="{x:Binding OpenGithubCommand}"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

@@ -9,7 +9,7 @@
     Visual="Material"
     mc:Ignorable="d">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Command="{Binding SaveContactCommand}" Text="Save">
+        <ToolbarItem Command="{x:Binding SaveContactCommand}" Text="Save">
             <ToolbarItem.IconImageSource>
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="Android" Value="icon_save.xml"/>
@@ -27,12 +27,13 @@
                 FontSize="24"
                 HorizontalOptions="Center"
                 HorizontalTextAlignment="Center"
-                Text="{Binding ID, Mode=OneWayToSource}"
+                Text="{x:Binding ID,
+                                 Mode=OneWayToSource}"
                 VerticalOptions="Start">
                 <Label.FormattedText>
                     <FormattedString>
                         <Span Text="You are changing contact&#x0a;with ID "/>
-                        <Span x:Name="IDLabel" Text="{Binding ID, Mode=OneWayToSource}"/>
+                        <Span x:Name="IDLabel" Text="{x:Binding ID, Mode=OneWayToSource}"/>
                         <Span Text="."/>
                     </FormattedString>
                 </Label.FormattedText>
@@ -49,13 +50,13 @@
                         BackgroundColor="White"
                         ClearButtonVisibility="WhileEditing"
                         Placeholder="Name"
-                        Text="{Binding Name}"/>
+                        Text="{x:Binding Name}"/>
                     <Entry x:Name="SurnameEntry"
                         Grid.Column="1"
                         BackgroundColor="White"
                         ClearButtonVisibility="WhileEditing"
                         Placeholder="Surname"
-                        Text="{Binding Surname}"/>
+                        Text="{x:Binding Surname}"/>
                 </Grid>
 
                 <Entry x:Name="PhoneEntry"
@@ -63,20 +64,20 @@
                     ClearButtonVisibility="WhileEditing"
                     Keyboard="Telephone"
                     Placeholder="Phone number"
-                    Text="{Binding PhoneNumber}"/>
+                    Text="{x:Binding PhoneNumber}"/>
                 <Entry x:Name="EmailEntry"
                     BackgroundColor="White"
                     ClearButtonVisibility="WhileEditing"
                     Keyboard="Email"
                     Placeholder="E-mail"
-                    Text="{Binding Email}"/>
+                    Text="{x:Binding Email}"/>
                 <Entry x:Name="AddressEntry"
                     BackgroundColor="White"
                     ClearButtonVisibility="WhileEditing"
                     Placeholder="Address"
-                    Text="{Binding Address}"/>
+                    Text="{x:Binding Address}"/>
 
-                <Label Text="{Binding ValidateMessage}" TextColor="Red"/>
+                <Label Text="{x:Binding ValidateMessage}" TextColor="Red"/>
             </StackLayout>
         </Grid>
     </ContentPage.Content>

@@ -25,7 +25,7 @@ namespace AddressBook
             {
                 if (database == null)
                 {
-                    database = new ContactsDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "ContactsDatabase.db3"));
+                    database = new ContactsDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "ContactsDatabase.sqlite"));
                 }
                 return database;
             }
