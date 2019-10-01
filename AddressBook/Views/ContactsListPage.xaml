@@ -30,6 +30,9 @@
                 ItemSizingStrategy="MeasureFirstItem"
                 ItemsSource="{x:Binding ContactsList}"
                 SelectionMode="Single">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical"/>
+                </CollectionView.ItemsLayout>
                 <CollectionView.Behaviors>
                     <b:EventToCommandBehavior
                         Command="{x:Binding ItemTappedCommand}"
