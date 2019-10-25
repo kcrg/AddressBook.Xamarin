@@ -3,13 +3,13 @@ using SQLite;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace AddressBook.Services
+namespace AddressBook.Services.Implementations
 {
-    public class ContactsDatabase
+    public class ContactsDatabaseService : IContactsDatabaseService
     {
         private readonly SQLiteAsyncConnection _database;
 
-        public ContactsDatabase(string dbPath)
+        public ContactsDatabaseService(string dbPath)
         {
             _database = new SQLiteAsyncConnection(dbPath);
             _database.CreateTableAsync<ContactModel>().Wait();

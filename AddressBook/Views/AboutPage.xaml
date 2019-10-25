@@ -4,8 +4,10 @@
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+    xmlns:viewmodels="clr-namespace:AddressBook.ViewModels"
     Title="About"
     prism:ViewModelLocator.AutowireViewModel="True"
+    x:DataType="viewmodels:AboutPageViewModel"
     Visual="Material"
     mc:Ignorable="d">
     <ContentPage.Content>

@@ -1,7 +1,7 @@
 ﻿<ContentPage x:Class="AddressBook.Views.ContactsListPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:AddressBook.Models="clr-namespace:AddressBook.Models"
+    xmlns:models="clr-namespace:AddressBook.Models"
     xmlns:b="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -11,7 +11,7 @@
     Visual="Material"
     mc:Ignorable="d">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Command="{x:Binding AddContactCommand}" Text="Add">
+        <ToolbarItem Command="{Binding AddContactCommand}" Text="Add">
             <ToolbarItem.IconImageSource>
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="Android" Value="icon_add_contact.xml"/>
@@ -24,23 +24,23 @@
 
     <ContentPage.Content>
         <Grid>
-            <ActivityIndicator IsRunning="{x:Binding IsLoading}" Style="{StaticResource ActivityIndicator}"/>
+            <ActivityIndicator IsRunning="{Binding IsLoading}" Style="{StaticResource ActivityIndicator}"/>
 
             <CollectionView x:Name="collectionView"
                 ItemSizingStrategy="MeasureFirstItem"
-                ItemsSource="{x:Binding ContactsList}"
+                ItemsSource="{Binding ContactsList}"
                 SelectionMode="Single">
                 <CollectionView.ItemsLayout>
                     <LinearItemsLayout Orientation="Vertical"/>
                 </CollectionView.ItemsLayout>
                 <CollectionView.Behaviors>
                     <b:EventToCommandBehavior
-                        Command="{x:Binding ItemTappedCommand}"
+                        Command="{Binding ItemTappedCommand}"
                         EventArgsParameterPath="CurrentSelection"
                         EventName="SelectionChanged"/>
                 </CollectionView.Behaviors>
                 <CollectionView.ItemTemplate>
-                    <DataTemplate x:DataType="AddressBook.Models:ContactModel">
+                    <DataTemplate x:DataType="models:ContactModel">
                         <StackLayout Padding="10">
                             <Frame Padding="8" CornerRadius="0">
                                 <Grid>
@@ -54,27 +54,27 @@
                                         <Label Style="{StaticResource ListLabel}">
                                             <Label.FormattedText>
                                                 <FormattedString>
-                                                    <Span Text="{x:Binding Name}"/>
+                                                    <Span Text="{Binding Name}"/>
                                                     <Span Text=" "/>
-                                                    <Span Text="{x:Binding Surname}"/>
+                                                    <Span Text="{Binding Surname}"/>
                                                 </FormattedString>
                                             </Label.FormattedText>
                                         </Label>
                                         <Label Style="{StaticResource ListLabel}"
-                                            Text="{x:Binding PhoneNumber}"
+                                            Text="{Binding PhoneNumber}"
                                             TextColor="DarkGray"/>
                                     </StackLayout>
 
                                     <ImageButton Style="{StaticResource ListImageButton}"
                                         Grid.Column="1"
                                         Clicked="EditContact"
-                                        CommandParameter="{x:Binding ID}"
+                                        CommandParameter="{Binding ID}"
                                         Source="icon_create.xml"/>
 
                                     <ImageButton Style="{StaticResource ListImageButton}"
                                         Grid.Column="2"
                                         Clicked="DeleteContact"
-                                        CommandParameter="{x:Binding ID}"
+                                        CommandParameter="{Binding ID}"
                                         Source="icon_delete.xml"/>
                                 </Grid>
                             </Frame>

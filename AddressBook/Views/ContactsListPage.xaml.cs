@@ -3,11 +3,9 @@ using AddressBook.ViewModels;
 using Newtonsoft.Json;
 using System;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace AddressBook.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ContactsListPage : ContentPage
     {
         public ContactsListPage()
@@ -50,7 +48,6 @@ namespace AddressBook.Views
             ContactModel contactToEdit = await App.Database.GetContactAsync(ID);
 
             string contactJson = JsonConvert.SerializeObject(contactToEdit);
-
             await Shell.Current.GoToAsync($"contactlist/contactcreate?entry={contactJson}");
         }
     }

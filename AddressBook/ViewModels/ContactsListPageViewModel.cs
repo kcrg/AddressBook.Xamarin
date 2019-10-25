@@ -45,6 +45,11 @@ namespace AddressBook.ViewModels
 
         public async void ShowDetails(IReadOnlyList<object> obj, IPageDialogService dialogService)
         {
+            if (obj is null)
+            {
+                return;
+            }
+
             List<object> list = (List<object>)obj;
             ContactModel[] contact = list.ConvertAll(item => (ContactModel)item).ToArray();
 

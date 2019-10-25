@@ -2,12 +2,10 @@
 using Newtonsoft.Json;
 using System;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace AddressBook.Views
 {
     [QueryProperty("Entry", "entry")]
-    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ContactCreatePage : ContentPage
     {
         private string Json;

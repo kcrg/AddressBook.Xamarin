@@ -1,4 +1,4 @@
-﻿using AddressBook.Services;
+﻿using AddressBook.Services.Implementations;
 using AddressBook.Styles;
 using AddressBook.ViewModels;
 using AddressBook.Views;
@@ -18,14 +18,14 @@ namespace AddressBook
         private const int smallWightResolution = 768;
         private const int smallHeightResolution = 1280;
 
-        private static ContactsDatabase database;
-        public static ContactsDatabase Database
+        private static ContactsDatabaseService database;
+        public static ContactsDatabaseService Database
         {
             get
             {
                 if (database == null)
                 {
-                    database = new ContactsDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "ContactsDatabase.sqlite"));
+                    database = new ContactsDatabaseService(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "ContactsDatabase.sqlite"));
                 }
                 return database;
             }

@@ -61,7 +61,7 @@ namespace AddressBook.ViewModels
 
         public bool IsEmpty(string value)
         {
-            if (value == null)
+            if (value is null)
             {
                 return false;
             }
@@ -72,7 +72,7 @@ namespace AddressBook.ViewModels
 
         public bool IsEmail(string value)
         {
-            if (value == null)
+            if (value is null)
             {
                 return false;
             }
@@ -85,7 +85,7 @@ namespace AddressBook.ViewModels
 
         public bool IsNumber(string value)
         {
-            if (value == null && value.Length != 9)
+            if (value is null && value.Length != 9)
             {
                 return false;
             }
