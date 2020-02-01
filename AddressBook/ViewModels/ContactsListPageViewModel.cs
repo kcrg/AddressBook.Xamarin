@@ -5,6 +5,7 @@ using Prism.Services;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace AddressBook.ViewModels
@@ -19,26 +20,20 @@ namespace AddressBook.ViewModels
             set => SetProperty(ref _isLoading, value);
         }
 
-        public ObservableCollection<ContactModel> ContactsList { get; private set; }
-        public DelegateCommand AddContactCommand { get; private set; }
+        public ObservableCollection<ContactModel> ContactsList { get; }
+        public DelegateCommand AddContactCommand { get; }
         public DelegateCommand<string> DeleteContactCommand { get; set; }
-        public DelegateCommand<IReadOnlyList<object>> ItemTappedCommand { get; private set; }
+        public DelegateCommand<IReadOnlyList<object>> ItemTappedCommand { get; }
 
-        public DelegateCommand LoadDatabase { get; private set; }
+        public DelegateCommand LoadDatabase { get; }
 
         public ContactsListPageViewModel(IPageDialogService dialogService)
         {
             ContactsList = new ObservableCollection<ContactModel>();
 
-            AddContactCommand = new DelegateCommand(async () =>
-            {
-                await Shell.Current.GoToAsync("contactlist/contactcreate");
-            });
+            AddContactCommand = new DelegateCommand(() => MainThread.BeginInvokeOnMainThread(async () => await Shell.Current.GoToAsync("contactlist/contactcreate").ConfigureAwait(false)));
 
-            ItemTappedCommand = new DelegateCommand<IReadOnlyList<object>>((o) =>
-            {
-                ShowDetails(o, dialogService);
-            });
+            ItemTappedCommand = new DelegateCommand<IReadOnlyList<object>>((o) => ShowDetails(o, dialogService));
 
             LoadDatabase = new DelegateCommand(LoadData);
         }
@@ -59,13 +54,13 @@ namespace AddressBook.ViewModels
             }
             string Message = $"{contact[0].Name} {contact[0].Surname}\nPhone number: {contact[0].PhoneNumber}\nE-mail: {contact[0].Email}\nAddress: {contact[0].Address}";
 
-            await dialogService.DisplayAlertAsync("Details", Message, "Close");
+            await dialogService.DisplayAlertAsync("Details", Message, "Close").ConfigureAwait(false);
         }
 
         public async void LoadData()
         {
             ContactsList.Clear();
-            List<ContactModel> database = await App.Database.GetContactsAsync();
+            List<ContactModel> database = await App.Database.GetContactsAsync().ConfigureAwait(false);
             foreach (ContactModel contact in database)
             {
                 ContactsList.Add(contact);

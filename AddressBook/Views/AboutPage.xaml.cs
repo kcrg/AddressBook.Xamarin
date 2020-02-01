@@ -19,18 +19,13 @@ namespace AddressBook.Views
         private async void StartAnimation()
         {
             // Waiting for the page to load
-            await Task.Delay(200);
+            await Task.Delay(200).ConfigureAwait(false);
 
-            _ = await Task.WhenAll(
-            ProfilePicture.TranslateTo(0, -60, 1100, Easing.CubicOut),
-            ProfilePicture.FadeTo(100, 1400, Easing.CubicIn)
-            );
-
-            _ = await Task.WhenAll(
+            await Task.WhenAll(
                DescriptionPanel.TranslateTo(0, -15, 1000, Easing.CubicOut),
                DescriptionPanel.FadeTo(100, 1000, Easing.CubicIn),
                GithubButton.FadeTo(100, 1000, Easing.CubicIn)
-               );
+               ).ConfigureAwait(false);
         }
     }
 }

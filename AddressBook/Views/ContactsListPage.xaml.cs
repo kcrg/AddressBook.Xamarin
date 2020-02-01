@@ -2,6 +2,7 @@
 using AddressBook.ViewModels;
 using Newtonsoft.Json;
 using System;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace AddressBook.Views
@@ -33,9 +34,9 @@ namespace AddressBook.Views
             ImageButton btn = (ImageButton)sender;
 
             int ID = int.Parse(btn.CommandParameter.ToString());
-            ContactModel contactToDelete = await App.Database.GetContactAsync(ID);
+            ContactModel contactToDelete = await App.Database.GetContactAsync(ID).ConfigureAwait(false);
 
-            await App.Database.DeleteContactAsync(contactToDelete);
+            await App.Database.DeleteContactAsync(contactToDelete).ConfigureAwait(false);
 
             LoadDatabase();
         }
@@ -45,10 +46,10 @@ namespace AddressBook.Views
             ImageButton btn = (ImageButton)sender;
 
             int ID = int.Parse(btn.CommandParameter.ToString());
-            ContactModel contactToEdit = await App.Database.GetContactAsync(ID);
+            ContactModel contactToEdit = await App.Database.GetContactAsync(ID).ConfigureAwait(false);
 
             string contactJson = JsonConvert.SerializeObject(contactToEdit);
-            await Shell.Current.GoToAsync($"contactlist/contactcreate?entry={contactJson}");
+            MainThread.BeginInvokeOnMainThread(async () => await Shell.Current.GoToAsync($"contactlist/contactcreate?entry={contactJson}").ConfigureAwait(false));
         }
     }
 }

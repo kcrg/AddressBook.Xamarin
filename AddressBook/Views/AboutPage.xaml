@@ -12,14 +12,9 @@
     mc:Ignorable="d">
     <ContentPage.Content>
         <Grid>
-            <Image
-                IsOpaque="False"
-                Source="AboutProfileBackground.jpg"
-                VerticalOptions="Start"/>
-
-            <Image x:Name="ProfilePicture" Style="{StaticResource AboutProfilePicture}"/>
-
             <StackLayout x:Name="DescriptionPanel" Style="{StaticResource AboutDescriptionPanel}">
+                <Image x:Name="ProfilePicture" Style="{StaticResource AboutProfilePicture}"/>
+                
                 <Label Style="{StaticResource AboutTitleLabel}" Text="Kacper Tryniecki"/>
                 <Label Style="{StaticResource AboutDescLabel}" Text=".NET Mobile Developer"/>
 

@@ -2,6 +2,7 @@
 using Prism.Commands;
 using Prism.Mvvm;
 using System.Text.RegularExpressions;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace AddressBook.ViewModels
@@ -23,11 +24,11 @@ namespace AddressBook.ViewModels
             set => SetProperty(ref _validateMessage, value);
         }
 
-        public DelegateCommand SaveContactCommand { get; private set; }
+        public DelegateCommand SaveContactCommand { get; }
 
         public ContactCreatePageViewModel()
         {
-            SaveContactCommand = new DelegateCommand(() => AddContact());
+            SaveContactCommand = new DelegateCommand(AddContact);
         }
 
         public async void AddContact()
@@ -53,9 +54,9 @@ namespace AddressBook.ViewModels
                     Email = Email,
                     Address = Address
                 };
-                await App.Database.SaveContactAsync(contact);
+                await App.Database.SaveContactAsync(contact).ConfigureAwait(false);
 
-                await Shell.Current.Navigation.PopAsync();
+                MainThread.BeginInvokeOnMainThread(async () => await Shell.Current.Navigation.PopAsync().ConfigureAwait(false));
             }
         }
 
@@ -90,7 +91,7 @@ namespace AddressBook.ViewModels
                 return false;
             }
 
-            Regex regex = new Regex(@"^[0-9]+$");
+            Regex regex = new Regex("^[0-9]+$");
             Match match = regex.Match(value);
 
             return match.Success;

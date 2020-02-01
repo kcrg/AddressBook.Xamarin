@@ -8,9 +8,9 @@ namespace AddressBook.ViewModels
 {
     public class AboutPageViewModel : BindableBase
     {
-        public DelegateCommand PhoneTappedCommand { get; private set; }
-        public DelegateCommand EmailTappedCommand { get; private set; }
-        public DelegateCommand OpenGithubCommand { get; private set; }
+        public DelegateCommand PhoneTappedCommand { get; }
+        public DelegateCommand EmailTappedCommand { get; }
+        public DelegateCommand OpenGithubCommand { get; }
 
         public AboutPageViewModel()
         {
@@ -42,7 +42,7 @@ namespace AddressBook.ViewModels
                     {
                         To = { "kacper@tryniecki.com" },
                     };
-                    await Email.ComposeAsync(message);
+                    await Email.ComposeAsync(message).ConfigureAwait(false);
                 }
                 catch (FeatureNotSupportedException ex)
                 {
@@ -54,10 +54,7 @@ namespace AddressBook.ViewModels
                 }
             });
 
-            OpenGithubCommand = new DelegateCommand(async () =>
-            {
-                await Browser.OpenAsync("https://github.com/kcrg", BrowserLaunchMode.SystemPreferred);
-            });
+            OpenGithubCommand = new DelegateCommand(async () => await Browser.OpenAsync("https://github.com/kcrg", BrowserLaunchMode.SystemPreferred).ConfigureAwait(false));
         }
 
         private void ShowToastMessage(string message, int exceptionCode)

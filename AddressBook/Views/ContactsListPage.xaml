@@ -1,10 +1,11 @@
-﻿<ContentPage x:Class="AddressBook.Views.ContactsListPage"
+﻿<ContentPage
+    x:Class="AddressBook.Views.ContactsListPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:models="clr-namespace:AddressBook.Models"
     xmlns:b="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:models="clr-namespace:AddressBook.Models"
     xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
     Title="Contacts"
     prism:ViewModelLocator.AutowireViewModel="True"
@@ -14,9 +15,9 @@
         <ToolbarItem Command="{Binding AddContactCommand}" Text="Add">
             <ToolbarItem.IconImageSource>
                 <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="Android" Value="icon_add_contact.xml"/>
-                    <On Platform="iOS" Value=""/>
-                    <On Platform="UWP" Value=""/>
+                    <On Platform="Android" Value="icon_add_contact.xml" />
+                    <On Platform="iOS" Value="" />
+                    <On Platform="UWP" Value="" />
                 </OnPlatform>
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
@@ -24,20 +25,21 @@
 
     <ContentPage.Content>
         <Grid>
-            <ActivityIndicator IsRunning="{Binding IsLoading}" Style="{StaticResource ActivityIndicator}"/>
+            <ActivityIndicator IsRunning="{Binding IsLoading}" IsVisible="{Binding IsLoading}" Style="{StaticResource ActivityIndicator}" />
 
-            <CollectionView x:Name="collectionView"
+            <CollectionView
+                x:Name="collectionView"
                 ItemSizingStrategy="MeasureFirstItem"
                 ItemsSource="{Binding ContactsList}"
                 SelectionMode="Single">
                 <CollectionView.ItemsLayout>
-                    <LinearItemsLayout Orientation="Vertical"/>
+                    <LinearItemsLayout Orientation="Vertical" />
                 </CollectionView.ItemsLayout>
                 <CollectionView.Behaviors>
                     <b:EventToCommandBehavior
                         Command="{Binding ItemTappedCommand}"
                         EventArgsParameterPath="CurrentSelection"
-                        EventName="SelectionChanged"/>
+                        EventName="SelectionChanged" />
                 </CollectionView.Behaviors>
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="models:ContactModel">
@@ -45,37 +47,40 @@
                             <Frame Padding="8" CornerRadius="0">
                                 <Grid>
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="76*"/>
-                                        <ColumnDefinition Width="12*"/>
-                                        <ColumnDefinition Width="12*"/>
+                                        <ColumnDefinition Width="76*" />
+                                        <ColumnDefinition Width="12*" />
+                                        <ColumnDefinition Width="12*" />
                                     </Grid.ColumnDefinitions>
 
                                     <StackLayout Grid.Column="0" Margin="12,0,0,0">
                                         <Label Style="{StaticResource ListLabel}">
                                             <Label.FormattedText>
                                                 <FormattedString>
-                                                    <Span Text="{Binding Name}"/>
-                                                    <Span Text=" "/>
-                                                    <Span Text="{Binding Surname}"/>
+                                                    <Span Text="{Binding Name}" />
+                                                    <Span Text=" " />
+                                                    <Span Text="{Binding Surname}" />
                                                 </FormattedString>
                                             </Label.FormattedText>
                                         </Label>
-                                        <Label Style="{StaticResource ListLabel}"
+                                        <Label
+                                            Style="{StaticResource ListLabel}"
                                             Text="{Binding PhoneNumber}"
-                                            TextColor="DarkGray"/>
+                                            TextColor="DarkGray" />
                                     </StackLayout>
 
-                                    <ImageButton Style="{StaticResource ListImageButton}"
+                                    <ImageButton
                                         Grid.Column="1"
                                         Clicked="EditContact"
                                         CommandParameter="{Binding ID}"
-                                        Source="icon_create.xml"/>
+                                        Source="icon_create.xml"
+                                        Style="{StaticResource ListImageButton}" />
 
-                                    <ImageButton Style="{StaticResource ListImageButton}"
+                                    <ImageButton
                                         Grid.Column="2"
                                         Clicked="DeleteContact"
                                         CommandParameter="{Binding ID}"
-                                        Source="icon_delete.xml"/>
+                                        Source="icon_delete.xml"
+                                        Style="{StaticResource ListImageButton}" />
                                 </Grid>
                             </Frame>
                         </StackLayout>
@@ -83,13 +88,14 @@
                 </CollectionView.ItemTemplate>
                 <CollectionView.EmptyView>
                     <Grid>
-                        <Label Style="{StaticResource ListEmptyViewLabel}"
+                        <Label
                             HorizontalOptions="Center"
+                            Style="{StaticResource ListEmptyViewLabel}"
                             VerticalOptions="Center">
                             <Label.FormattedText>
                                 <FormattedString>
-                                    <Span Text="There is no contacts to show.&#x0a;"/>
-                                    <Span FontSize="14" Text="Try add a new one!"/>
+                                    <Span Text="There is no contacts to show.&#x0a;" />
+                                    <Span FontSize="14" Text="Try add a new one!" />
                                 </FormattedString>
                             </Label.FormattedText>
                         </Label>

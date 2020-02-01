@@ -15,31 +15,26 @@ namespace AddressBook.Services.Implementations
             _database.CreateTableAsync<ContactModel>().Wait();
         }
 
-        public Task<List<ContactModel>> GetContactsAsync()
+        public async Task<List<ContactModel>> GetContactsAsync()
         {
-            return _database.Table<ContactModel>().ToListAsync();
+            return await _database.Table<ContactModel>().ToListAsync().ConfigureAwait(false);
         }
 
-        public Task<ContactModel> GetContactAsync(int id)
+        public async Task<ContactModel> GetContactAsync(int id)
         {
-            return _database.Table<ContactModel>().Where(i => i.ID == id).FirstOrDefaultAsync();
+            return await _database.Table<ContactModel>().Where(i => i.ID == id).FirstOrDefaultAsync().ConfigureAwait(false);
         }
 
-        public Task<int> SaveContactAsync(ContactModel contact)
+        public async Task<int> SaveContactAsync(ContactModel contact)
         {
-            if (contact.ID != 0)
-            {
-                return _database.UpdateAsync(contact);
-            }
-            else
-            {
-                return _database.InsertAsync(contact);
-            }
+            return contact.ID != 0
+                ? await _database.UpdateAsync(contact).ConfigureAwait(false)
+                : await _database.InsertAsync(contact).ConfigureAwait(false);
         }
 
-        public Task<int> DeleteContactAsync(ContactModel contact)
+        public async Task<int> DeleteContactAsync(ContactModel contact)
         {
-            return _database.DeleteAsync(contact);
+            return await _database.DeleteAsync(contact).ConfigureAwait(false);
         }
     }
 }

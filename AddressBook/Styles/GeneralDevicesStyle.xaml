@@ -4,8 +4,8 @@
 
     <!--  List Page  -->
     <Style x:Key="ActivityIndicator" TargetType="ActivityIndicator">
-        <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
-        <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+        <Setter Property="VerticalOptions" Value="Center"/>
+        <Setter Property="HorizontalOptions" Value="Center"/>
     </Style>
 
     <Style x:Key="ListLabel" TargetType="Label">
@@ -20,8 +20,8 @@
         <Setter Property="BackgroundColor" Value="White"/>
         <Setter Property="HeightRequest" Value="42"/>
         <Setter Property="WidthRequest" Value="42"/>
-        <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
-        <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+        <Setter Property="VerticalOptions" Value="Center"/>
+        <Setter Property="HorizontalOptions" Value="Center"/>
     </Style>
 
     <Style x:Key="ListEmptyViewLabel" TargetType="Label">
@@ -33,18 +33,16 @@
 
     <!--  About Page  -->
     <Style x:Key="AboutProfilePicture" TargetType="Image">
-        <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
-        <Setter Property="Margin" Value="0,170,0,0"/>
+        <Setter Property="HorizontalOptions" Value="Center"/>
         <Setter Property="HeightRequest" Value="112"/>
         <Setter Property="IsOpaque" Value="True"/>
-        <Setter Property="Opacity" Value="0"/>
         <Setter Property="Source" Value="AboutProfilePicture.png"/>
-        <Setter Property="VerticalOptions" Value="StartAndExpand"/>
         <Setter Property="WidthRequest" Value="112"/>
     </Style>
 
     <Style x:Key="AboutDescriptionPanel" TargetType="StackLayout">
-        <Setter Property="Margin" Value="0,70,0,0"/>
+        <Setter Property="Margin" Value="0,0,0,100"/>
+        <Setter Property="HorizontalOptions" Value="Center"/>
         <Setter Property="Opacity" Value="0"/>
         <Setter Property="VerticalOptions" Value="Center"/>
     </Style>

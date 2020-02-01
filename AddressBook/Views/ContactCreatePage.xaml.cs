@@ -9,6 +9,7 @@ namespace AddressBook.Views
     public partial class ContactCreatePage : ContentPage
     {
         private string Json;
+
         public string Entry
         {
             set => Json = Uri.UnescapeDataString(value);

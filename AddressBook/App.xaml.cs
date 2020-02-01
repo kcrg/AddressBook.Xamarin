@@ -19,17 +19,9 @@ namespace AddressBook
         private const int smallHeightResolution = 1280;
 
         private static ContactsDatabaseService database;
-        public static ContactsDatabaseService Database
-        {
-            get
-            {
-                if (database == null)
-                {
-                    database = new ContactsDatabaseService(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "ContactsDatabase.sqlite"));
-                }
-                return database;
-            }
-        }
+
+        public static ContactsDatabaseService Database => database 
+            ?? (database = new ContactsDatabaseService(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "ContactsDatabase.sqlite")));
 
         private void LoadStyles()
         {
@@ -52,7 +44,7 @@ namespace AddressBook
             double width = mainDisplayInfo.Width;
             double height = mainDisplayInfo.Height;
 
-            return (width <= smallWightResolution && height <= smallHeightResolution);
+            return width <= smallWightResolution && height <= smallHeightResolution;
         }
 
         public App() : this(null) { }
