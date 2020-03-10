@@ -1,4 +1,5 @@
-﻿<ContentPage x:Class="AddressBook.Views.AboutPage"
+﻿<ContentPage
+    x:Class="AddressBook.Views.AboutPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
@@ -10,40 +11,54 @@
     x:DataType="viewmodels:AboutPageViewModel"
     Visual="Material"
     mc:Ignorable="d">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Command="{Binding SettingsCommand}" Text="Settings">
+            <ToolbarItem.IconImageSource>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android" Value="icon_settings.xml" />
+                    <On Platform="iOS" Value="" />
+                    <On Platform="UWP" Value="" />
+                </OnPlatform>
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+
     <ContentPage.Content>
         <Grid>
             <StackLayout x:Name="DescriptionPanel" Style="{StaticResource AboutDescriptionPanel}">
-                <Image x:Name="ProfilePicture" Style="{StaticResource AboutProfilePicture}"/>
-                
-                <Label Style="{StaticResource AboutTitleLabel}" Text="Kacper Tryniecki"/>
-                <Label Style="{StaticResource AboutDescLabel}" Text=".NET Mobile Developer"/>
+                <Image x:Name="ProfilePicture" Style="{StaticResource AboutProfilePicture}" />
 
-                <Label Style="{StaticResource AboutTitleLabel}"
+                <Label Style="{StaticResource AboutTitleLabel}" Text="Kacper Tryniecki" />
+                <Label Style="{StaticResource AboutDescLabel}" Text=".NET Mobile Developer" />
+
+                <Label
                     Margin="0,20,0,0"
                     FontSize="24"
-                    Text="Contact:"/>
+                    Style="{StaticResource AboutTitleLabel}"
+                    Text="Contact:" />
                 <Label Style="{StaticResource AboutDescLabel}" Text="Phone: +48 733 428 869">
                     <Label.FormattedText>
                         <FormattedString>
-                            <Span Text="Phone: "/>
+                            <Span Text="Phone: " />
                             <Span Text="+48 733 428 869" TextDecorations="Underline">
                                 <Span.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{x:Binding PhoneTappedCommand}"/>
+                                    <TapGestureRecognizer Command="{x:Binding PhoneTappedCommand}" />
                                 </Span.GestureRecognizers>
                             </Span>
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <Label Style="{StaticResource AboutDescLabel}"
+                <Label
                     Margin="0,10,0,0"
+                    Style="{StaticResource AboutDescLabel}"
                     Text="E-mail: kacper@tryniecki.com">
                     <Label.FormattedText>
                         <FormattedString>
-                            <Span Text="E-mail: "/>
-                            <Span Text=" "/>
+                            <Span Text="E-mail: " />
+                            <Span Text=" " />
                             <Span Text="kacper@tryniecki.com" TextDecorations="Underline">
                                 <Span.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{x:Binding EmailTappedCommand}"/>
+                                    <TapGestureRecognizer Command="{x:Binding EmailTappedCommand}" />
                                 </Span.GestureRecognizers>
                             </Span>
                         </FormattedString>
@@ -51,8 +66,10 @@
                 </Label>
             </StackLayout>
 
-            <Button x:Name="GithubButton" Style="{StaticResource AboutButton}"
-                Command="{x:Binding OpenGithubCommand}"/>
+            <Button
+                x:Name="GithubButton"
+                Command="{x:Binding OpenGithubCommand}"
+                Style="{StaticResource AboutButton}" />
         </Grid>
     </ContentPage.Content>
 </ContentPage>

@@ -56,9 +56,12 @@
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidPackageFormat>aab</AndroidPackageFormat>
     <AndroidUseAapt2>true</AndroidUseAapt2>
-    <AndroidLinkMode>None</AndroidLinkMode>
+    <AndroidLinkMode>Full</AndroidLinkMode>
     <AndroidCreatePackagePerAbi>false</AndroidCreatePackagePerAbi>
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
+    <AndroidLinkSkip>
+    </AndroidLinkSkip>
+    <AndroidEnableMultiDex>false</AndroidEnableMultiDex>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
@@ -69,28 +72,25 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Acr.UserDialogs">
-      <Version>7.0.35</Version>
+      <Version>7.1.0.440</Version>
     </PackageReference>
     <PackageReference Include="Prism.Forms">
       <Version>7.2.0.1422</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.AndroidX.Migration">
-      <Version>1.0.0-rc1</Version>
+    <PackageReference Include="SQLitePCLRaw.lib.e_sqlite3.android">
+      <Version>2.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="SQLitePCLRaw.provider.e_sqlite3.android">
+      <Version>1.1.14</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Essentials">
-      <Version>1.4.0-pre2</Version>
+      <Version>1.5.1</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="4.6.0.210-nightly" />
+    <PackageReference Include="Xamarin.Forms" Version="4.7.0.425-nightly" />
     <PackageReference Include="Prism.DryIoc.Forms" Version="7.2.0.1422" />
     <PackageReference Include="Xamarin.Forms.Visual.Material">
-      <Version>4.6.0.210-nightly</Version>
+      <Version>4.7.0.425-nightly</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Google.Android.Material">
-      <Version>1.0.0-rc1</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.AndroidX.Browser" Version="1.0.0-rc1" />
-    <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0-rc1" />
-    <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData" Version="2.1.0-rc1" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAotProfile Include="$(MSBuildThisFileDirectory)custom.aprof" />
@@ -103,6 +103,7 @@
   <ItemGroup>
     <AndroidAsset Include="Assets\Lato-Semibold.ttf" />
     <AndroidAsset Include="Assets\Lato-Bold.ttf" />
+    <ProguardConfiguration Include="proguard.cfg" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
   </ItemGroup>
@@ -180,19 +181,33 @@
     <AndroidResource Include="Resources\drawable\icon_delete.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\icon_contacts_list.xml" />
+    <AndroidResource Include="Resources\drawable\icon_contacts_solid.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\icon_create.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\icon_info.xml" />
+    <AndroidResource Include="Resources\drawable\icon_info_solid.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\AboutProfilePicture.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\icon_save.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <LinkDescription Include="linker.xml">
+      <SubType>Designer</SubType>
+    </LinkDescription>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\icon_contacts_outline.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\icon_info_outline.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\icon_settings.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

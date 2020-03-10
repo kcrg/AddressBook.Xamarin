@@ -1,4 +1,5 @@
-﻿using AddressBook.Services.Implementations;
+﻿using AddressBook.Services;
+using AddressBook.Services.Implementations;
 using AddressBook.Styles;
 using AddressBook.ViewModels;
 using AddressBook.Views;
@@ -18,10 +19,10 @@ namespace AddressBook
         private const int smallWightResolution = 768;
         private const int smallHeightResolution = 1280;
 
-        private static ContactsDatabaseService database;
+        private static ContactsDatabaseService databaseValue;
 
-        public static ContactsDatabaseService Database => database 
-            ?? (database = new ContactsDatabaseService(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "ContactsDatabase.sqlite")));
+        public static ContactsDatabaseService Database =>
+            databaseValue ?? (databaseValue = new ContactsDatabaseService(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "ContactsDatabase.db")));
 
         private void LoadStyles()
         {
@@ -44,7 +45,7 @@ namespace AddressBook
             double width = mainDisplayInfo.Width;
             double height = mainDisplayInfo.Height;
 
-            return width <= smallWightResolution && height <= smallHeightResolution;
+            return width <= smallWightResolution || height <= smallHeightResolution;
         }
 
         public App() : this(null) { }
@@ -58,15 +59,22 @@ namespace AddressBook
 
             MainPage = new AppShell();
 
+            Routing.RegisterRoute("about", typeof(AboutPage));
+            Routing.RegisterRoute("about/settings", typeof(SettingsPage));
+
             Routing.RegisterRoute("contactlist", typeof(ContactsListPage));
             Routing.RegisterRoute("contactlist/contactcreate", typeof(ContactCreatePage));
+            Routing.RegisterRoute("contactlist/settings", typeof(SettingsPage));
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            containerRegistry.Register(typeof(ISettingsService), typeof(SettingsService));
+
             containerRegistry.RegisterForNavigation<AppShell>();
             containerRegistry.RegisterForNavigation<ContactsListPage, ContactsListPageViewModel>();
             containerRegistry.RegisterForNavigation<ContactCreatePage, ContactCreatePageViewModel>();
+            containerRegistry.RegisterForNavigation<SettingsPage, SettingsPageViewModel>();
         }
     }
 }

@@ -5,6 +5,7 @@ using Android.OS;
 using Android.Runtime;
 using Prism;
 using Prism.Ioc;
+using SQLitePCL;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -26,6 +27,9 @@ namespace AddressBook.Droid
             FormsMaterial.Init(this, bundle);
             Platform.Init(this, bundle);
             UserDialogs.Init(this);
+
+            raw.SetProvider(new SQLite3Provider_e_sqlite3());
+
             LoadApplication(new App(new AndroidInitializer()));
         }
 

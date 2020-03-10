@@ -1,20 +1,24 @@
-﻿<ContentPage x:Class="AddressBook.Views.ContactCreatePage"
+﻿<ContentPage
+    x:Class="AddressBook.Views.ContactCreatePage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+    xmlns:viewmodels="clr-namespace:AddressBook.ViewModels"
     Title="Add/Edit"
     prism:ViewModelLocator.AutowireViewModel="True"
+    x:DataType="viewmodels:ContactCreatePageViewModel"
+    Shell.PresentationMode="Animated"
     Visual="Material"
     mc:Ignorable="d">
     <ContentPage.ToolbarItems>
         <ToolbarItem Command="{Binding SaveContactCommand}" Text="Save">
             <ToolbarItem.IconImageSource>
                 <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="Android" Value="icon_save.xml"/>
-                    <On Platform="iOS" Value=""/>
-                    <On Platform="UWP" Value=""/>
+                    <On Platform="Android" Value="icon_save.xml" />
+                    <On Platform="iOS" Value="" />
+                    <On Platform="UWP" Value="" />
                 </OnPlatform>
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
@@ -22,62 +26,69 @@
 
     <ContentPage.Content>
         <Grid Padding="20">
-            <Label x:Name="welcomeLabel" Style="{StaticResource ListLabel}"
+            <Label
+                x:Name="welcomeLabel"
                 Margin="0,25,0,0"
                 FontSize="24"
                 HorizontalOptions="Center"
                 HorizontalTextAlignment="Center"
+                Style="{StaticResource ListLabel}"
                 Text="{x:Binding ID,
                                  Mode=OneWayToSource}"
                 VerticalOptions="Start">
                 <Label.FormattedText>
                     <FormattedString>
-                        <Span Text="You are changing contact&#x0a;with ID "/>
-                        <Span x:Name="IDLabel" Text="{Binding ID, Mode=OneWayToSource}"/>
-                        <Span Text="."/>
+                        <Span Text="You are changing contact&#x0a;with ID " />
+                        <Span x:Name="IDLabel" Text="{Binding ID, Mode=OneWayToSource}" />
+                        <Span Text="." />
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
             <StackLayout VerticalOptions="Center">
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
 
-                    <Entry x:Name="NameEntry"
+                    <Entry
+                        x:Name="NameEntry"
                         Grid.Column="0"
                         BackgroundColor="White"
                         ClearButtonVisibility="WhileEditing"
                         Placeholder="Name"
-                        Text="{Binding Name}"/>
-                    <Entry x:Name="SurnameEntry"
+                        Text="{Binding Name}" />
+                    <Entry
+                        x:Name="SurnameEntry"
                         Grid.Column="1"
                         BackgroundColor="White"
                         ClearButtonVisibility="WhileEditing"
                         Placeholder="Surname"
-                        Text="{Binding Surname}"/>
+                        Text="{Binding Surname}" />
                 </Grid>
 
-                <Entry x:Name="PhoneEntry"
+                <Entry
+                    x:Name="PhoneEntry"
                     BackgroundColor="White"
                     ClearButtonVisibility="WhileEditing"
                     Keyboard="Telephone"
                     Placeholder="Phone number"
-                    Text="{Binding PhoneNumber}"/>
-                <Entry x:Name="EmailEntry"
+                    Text="{Binding PhoneNumber}" />
+                <Entry
+                    x:Name="EmailEntry"
                     BackgroundColor="White"
                     ClearButtonVisibility="WhileEditing"
                     Keyboard="Email"
                     Placeholder="E-mail"
-                    Text="{Binding Email}"/>
-                <Entry x:Name="AddressEntry"
+                    Text="{Binding Email}" />
+                <Entry
+                    x:Name="AddressEntry"
                     BackgroundColor="White"
                     ClearButtonVisibility="WhileEditing"
                     Placeholder="Address"
-                    Text="{Binding Address}"/>
+                    Text="{Binding Address}" />
 
-                <Label Text="{Binding ValidateMessage}" TextColor="Red"/>
+                <Label Text="{Binding ValidateMessage}" TextColor="Red" />
             </StackLayout>
         </Grid>
     </ContentPage.Content>

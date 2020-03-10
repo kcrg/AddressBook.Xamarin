@@ -15,7 +15,7 @@ namespace AddressBook.Droid
 {
 	
 	
-	[System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "1.0.0.0")]
+	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "1.0.0.0")]
 	public partial class Resource
 	{
 		
@@ -38,6 +38,18 @@ namespace AddressBook.Droid
 			global::Acr.UserDialogs.Resource.Animation.abc_slide_out_top = global::AddressBook.Droid.Resource.Animation.abc_slide_out_top;
 			global::Acr.UserDialogs.Resource.Animation.abc_tooltip_enter = global::AddressBook.Droid.Resource.Animation.abc_tooltip_enter;
 			global::Acr.UserDialogs.Resource.Animation.abc_tooltip_exit = global::AddressBook.Droid.Resource.Animation.abc_tooltip_exit;
+			global::Acr.UserDialogs.Resource.Animation.btn_checkbox_to_checked_box_inner_merged_animation = global::AddressBook.Droid.Resource.Animation.btn_checkbox_to_checked_box_inner_merged_animation;
+			global::Acr.UserDialogs.Resource.Animation.btn_checkbox_to_checked_box_outer_merged_animation = global::AddressBook.Droid.Resource.Animation.btn_checkbox_to_checked_box_outer_merged_animation;
+			global::Acr.UserDialogs.Resource.Animation.btn_checkbox_to_checked_icon_null_animation = global::AddressBook.Droid.Resource.Animation.btn_checkbox_to_checked_icon_null_animation;
+			global::Acr.UserDialogs.Resource.Animation.btn_checkbox_to_unchecked_box_inner_merged_animation = global::AddressBook.Droid.Resource.Animation.btn_checkbox_to_unchecked_box_inner_merged_animation;
+			global::Acr.UserDialogs.Resource.Animation.btn_checkbox_to_unchecked_check_path_merged_animation = global::AddressBook.Droid.Resource.Animation.btn_checkbox_to_unchecked_check_path_merged_animation;
+			global::Acr.UserDialogs.Resource.Animation.btn_checkbox_to_unchecked_icon_null_animation = global::AddressBook.Droid.Resource.Animation.btn_checkbox_to_unchecked_icon_null_animation;
+			global::Acr.UserDialogs.Resource.Animation.btn_radio_to_off_mtrl_dot_group_animation = global::AddressBook.Droid.Resource.Animation.btn_radio_to_off_mtrl_dot_group_animation;
+			global::Acr.UserDialogs.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_animation = global::AddressBook.Droid.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_animation;
+			global::Acr.UserDialogs.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_path_animation = global::AddressBook.Droid.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_path_animation;
+			global::Acr.UserDialogs.Resource.Animation.btn_radio_to_on_mtrl_dot_group_animation = global::AddressBook.Droid.Resource.Animation.btn_radio_to_on_mtrl_dot_group_animation;
+			global::Acr.UserDialogs.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_animation = global::AddressBook.Droid.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_animation;
+			global::Acr.UserDialogs.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_path_animation = global::AddressBook.Droid.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_path_animation;
 			global::Acr.UserDialogs.Resource.Animation.design_bottom_sheet_slide_in = global::AddressBook.Droid.Resource.Animation.design_bottom_sheet_slide_in;
 			global::Acr.UserDialogs.Resource.Animation.design_bottom_sheet_slide_out = global::AddressBook.Droid.Resource.Animation.design_bottom_sheet_slide_out;
 			global::Acr.UserDialogs.Resource.Animation.design_snackbar_in = global::AddressBook.Droid.Resource.Animation.design_snackbar_in;
@@ -145,6 +157,7 @@ namespace AddressBook.Droid
 			global::Acr.UserDialogs.Resource.Attribute.buttonBarNeutralButtonStyle = global::AddressBook.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
 			global::Acr.UserDialogs.Resource.Attribute.buttonBarPositiveButtonStyle = global::AddressBook.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
 			global::Acr.UserDialogs.Resource.Attribute.buttonBarStyle = global::AddressBook.Droid.Resource.Attribute.buttonBarStyle;
+			global::Acr.UserDialogs.Resource.Attribute.buttonCompat = global::AddressBook.Droid.Resource.Attribute.buttonCompat;
 			global::Acr.UserDialogs.Resource.Attribute.buttonGravity = global::AddressBook.Droid.Resource.Attribute.buttonGravity;
 			global::Acr.UserDialogs.Resource.Attribute.buttonIconDimen = global::AddressBook.Droid.Resource.Attribute.buttonIconDimen;
 			global::Acr.UserDialogs.Resource.Attribute.buttonPanelSideLayout = global::AddressBook.Droid.Resource.Attribute.buttonPanelSideLayout;
@@ -238,7 +251,15 @@ namespace AddressBook.Droid
 			global::Acr.UserDialogs.Resource.Attribute.dividerHorizontal = global::AddressBook.Droid.Resource.Attribute.dividerHorizontal;
 			global::Acr.UserDialogs.Resource.Attribute.dividerPadding = global::AddressBook.Droid.Resource.Attribute.dividerPadding;
 			global::Acr.UserDialogs.Resource.Attribute.dividerVertical = global::AddressBook.Droid.Resource.Attribute.dividerVertical;
+			global::Acr.UserDialogs.Resource.Attribute.drawableBottomCompat = global::AddressBook.Droid.Resource.Attribute.drawableBottomCompat;
+			global::Acr.UserDialogs.Resource.Attribute.drawableEndCompat = global::AddressBook.Droid.Resource.Attribute.drawableEndCompat;
+			global::Acr.UserDialogs.Resource.Attribute.drawableLeftCompat = global::AddressBook.Droid.Resource.Attribute.drawableLeftCompat;
+			global::Acr.UserDialogs.Resource.Attribute.drawableRightCompat = global::AddressBook.Droid.Resource.Attribute.drawableRightCompat;
 			global::Acr.UserDialogs.Resource.Attribute.drawableSize = global::AddressBook.Droid.Resource.Attribute.drawableSize;
+			global::Acr.UserDialogs.Resource.Attribute.drawableStartCompat = global::AddressBook.Droid.Resource.Attribute.drawableStartCompat;
+			global::Acr.UserDialogs.Resource.Attribute.drawableTint = global::AddressBook.Droid.Resource.Attribute.drawableTint;
+			global::Acr.UserDialogs.Resource.Attribute.drawableTintMode = global::AddressBook.Droid.Resource.Attribute.drawableTintMode;
+			global::Acr.UserDialogs.Resource.Attribute.drawableTopCompat = global::AddressBook.Droid.Resource.Attribute.drawableTopCompat;
 			global::Acr.UserDialogs.Resource.Attribute.drawerArrowStyle = global::AddressBook.Droid.Resource.Attribute.drawerArrowStyle;
 			global::Acr.UserDialogs.Resource.Attribute.dropdownListPreferredItemHeight = global::AddressBook.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
 			global::Acr.UserDialogs.Resource.Attribute.dropDownListViewStyle = global::AddressBook.Droid.Resource.Attribute.dropDownListViewStyle;
@@ -345,6 +366,8 @@ namespace AddressBook.Droid
 			global::Acr.UserDialogs.Resource.Attribute.lineHeight = global::AddressBook.Droid.Resource.Attribute.lineHeight;
 			global::Acr.UserDialogs.Resource.Attribute.lineSpacing = global::AddressBook.Droid.Resource.Attribute.lineSpacing;
 			global::Acr.UserDialogs.Resource.Attribute.listChoiceBackgroundIndicator = global::AddressBook.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::Acr.UserDialogs.Resource.Attribute.listChoiceIndicatorMultipleAnimated = global::AddressBook.Droid.Resource.Attribute.listChoiceIndicatorMultipleAnimated;
+			global::Acr.UserDialogs.Resource.Attribute.listChoiceIndicatorSingleAnimated = global::AddressBook.Droid.Resource.Attribute.listChoiceIndicatorSingleAnimated;
 			global::Acr.UserDialogs.Resource.Attribute.listDividerAlertDialog = global::AddressBook.Droid.Resource.Attribute.listDividerAlertDialog;
 			global::Acr.UserDialogs.Resource.Attribute.listItemLayout = global::AddressBook.Droid.Resource.Attribute.listItemLayout;
 			global::Acr.UserDialogs.Resource.Attribute.listLayout = global::AddressBook.Droid.Resource.Attribute.listLayout;
@@ -353,8 +376,10 @@ namespace AddressBook.Droid
 			global::Acr.UserDialogs.Resource.Attribute.listPreferredItemHeight = global::AddressBook.Droid.Resource.Attribute.listPreferredItemHeight;
 			global::Acr.UserDialogs.Resource.Attribute.listPreferredItemHeightLarge = global::AddressBook.Droid.Resource.Attribute.listPreferredItemHeightLarge;
 			global::Acr.UserDialogs.Resource.Attribute.listPreferredItemHeightSmall = global::AddressBook.Droid.Resource.Attribute.listPreferredItemHeightSmall;
+			global::Acr.UserDialogs.Resource.Attribute.listPreferredItemPaddingEnd = global::AddressBook.Droid.Resource.Attribute.listPreferredItemPaddingEnd;
 			global::Acr.UserDialogs.Resource.Attribute.listPreferredItemPaddingLeft = global::AddressBook.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
 			global::Acr.UserDialogs.Resource.Attribute.listPreferredItemPaddingRight = global::AddressBook.Droid.Resource.Attribute.listPreferredItemPaddingRight;
+			global::Acr.UserDialogs.Resource.Attribute.listPreferredItemPaddingStart = global::AddressBook.Droid.Resource.Attribute.listPreferredItemPaddingStart;
 			global::Acr.UserDialogs.Resource.Attribute.logo = global::AddressBook.Droid.Resource.Attribute.logo;
 			global::Acr.UserDialogs.Resource.Attribute.logoDescription = global::AddressBook.Droid.Resource.Attribute.logoDescription;
 			global::Acr.UserDialogs.Resource.Attribute.materialButtonStyle = global::AddressBook.Droid.Resource.Attribute.materialButtonStyle;
@@ -396,6 +421,7 @@ namespace AddressBook.Droid
 			global::Acr.UserDialogs.Resource.Attribute.ratingBarStyle = global::AddressBook.Droid.Resource.Attribute.ratingBarStyle;
 			global::Acr.UserDialogs.Resource.Attribute.ratingBarStyleIndicator = global::AddressBook.Droid.Resource.Attribute.ratingBarStyleIndicator;
 			global::Acr.UserDialogs.Resource.Attribute.ratingBarStyleSmall = global::AddressBook.Droid.Resource.Attribute.ratingBarStyleSmall;
+			global::Acr.UserDialogs.Resource.Attribute.recyclerViewStyle = global::AddressBook.Droid.Resource.Attribute.recyclerViewStyle;
 			global::Acr.UserDialogs.Resource.Attribute.reverseLayout = global::AddressBook.Droid.Resource.Attribute.reverseLayout;
 			global::Acr.UserDialogs.Resource.Attribute.rippleColor = global::AddressBook.Droid.Resource.Attribute.rippleColor;
 			global::Acr.UserDialogs.Resource.Attribute.scrimAnimationDuration = global::AddressBook.Droid.Resource.Attribute.scrimAnimationDuration;
@@ -496,6 +522,7 @@ namespace AddressBook.Droid
 			global::Acr.UserDialogs.Resource.Attribute.textColorSearchUrl = global::AddressBook.Droid.Resource.Attribute.textColorSearchUrl;
 			global::Acr.UserDialogs.Resource.Attribute.textEndPadding = global::AddressBook.Droid.Resource.Attribute.textEndPadding;
 			global::Acr.UserDialogs.Resource.Attribute.textInputStyle = global::AddressBook.Droid.Resource.Attribute.textInputStyle;
+			global::Acr.UserDialogs.Resource.Attribute.textLocale = global::AddressBook.Droid.Resource.Attribute.textLocale;
 			global::Acr.UserDialogs.Resource.Attribute.textStartPadding = global::AddressBook.Droid.Resource.Attribute.textStartPadding;
 			global::Acr.UserDialogs.Resource.Attribute.theme = global::AddressBook.Droid.Resource.Attribute.theme;
 			global::Acr.UserDialogs.Resource.Attribute.thickness = global::AddressBook.Droid.Resource.Attribute.thickness;
@@ -720,6 +747,9 @@ namespace AddressBook.Droid
 			global::Acr.UserDialogs.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::AddressBook.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
 			global::Acr.UserDialogs.Resource.Dimension.abc_edit_text_inset_top_material = global::AddressBook.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
 			global::Acr.UserDialogs.Resource.Dimension.abc_floating_window_z = global::AddressBook.Droid.Resource.Dimension.abc_floating_window_z;
+			global::Acr.UserDialogs.Resource.Dimension.abc_list_item_height_large_material = global::AddressBook.Droid.Resource.Dimension.abc_list_item_height_large_material;
+			global::Acr.UserDialogs.Resource.Dimension.abc_list_item_height_material = global::AddressBook.Droid.Resource.Dimension.abc_list_item_height_material;
+			global::Acr.UserDialogs.Resource.Dimension.abc_list_item_height_small_material = global::AddressBook.Droid.Resource.Dimension.abc_list_item_height_small_material;
 			global::Acr.UserDialogs.Resource.Dimension.abc_list_item_padding_horizontal_material = global::AddressBook.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
 			global::Acr.UserDialogs.Resource.Dimension.abc_panel_menu_list_width = global::AddressBook.Droid.Resource.Dimension.abc_panel_menu_list_width;
 			global::Acr.UserDialogs.Resource.Dimension.abc_progress_bar_height_material = global::AddressBook.Droid.Resource.Dimension.abc_progress_bar_height_material;
@@ -891,11 +921,13 @@ namespace AddressBook.Droid
 			global::Acr.UserDialogs.Resource.Drawable.abc_action_bar_item_background_material = global::AddressBook.Droid.Resource.Drawable.abc_action_bar_item_background_material;
 			global::Acr.UserDialogs.Resource.Drawable.abc_btn_borderless_material = global::AddressBook.Droid.Resource.Drawable.abc_btn_borderless_material;
 			global::Acr.UserDialogs.Resource.Drawable.abc_btn_check_material = global::AddressBook.Droid.Resource.Drawable.abc_btn_check_material;
+			global::Acr.UserDialogs.Resource.Drawable.abc_btn_check_material_anim = global::AddressBook.Droid.Resource.Drawable.abc_btn_check_material_anim;
 			global::Acr.UserDialogs.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::AddressBook.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
 			global::Acr.UserDialogs.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::AddressBook.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
 			global::Acr.UserDialogs.Resource.Drawable.abc_btn_colored_material = global::AddressBook.Droid.Resource.Drawable.abc_btn_colored_material;
 			global::Acr.UserDialogs.Resource.Drawable.abc_btn_default_mtrl_shape = global::AddressBook.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
 			global::Acr.UserDialogs.Resource.Drawable.abc_btn_radio_material = global::AddressBook.Droid.Resource.Drawable.abc_btn_radio_material;
+			global::Acr.UserDialogs.Resource.Drawable.abc_btn_radio_material_anim = global::AddressBook.Droid.Resource.Drawable.abc_btn_radio_material_anim;
 			global::Acr.UserDialogs.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::AddressBook.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
 			global::Acr.UserDialogs.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::AddressBook.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
 			global::Acr.UserDialogs.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::AddressBook.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
@@ -973,6 +1005,14 @@ namespace AddressBook.Droid
 			global::Acr.UserDialogs.Resource.Drawable.abc_vector_test = global::AddressBook.Droid.Resource.Drawable.abc_vector_test;
 			global::Acr.UserDialogs.Resource.Drawable.avd_hide_password = global::AddressBook.Droid.Resource.Drawable.avd_hide_password;
 			global::Acr.UserDialogs.Resource.Drawable.avd_show_password = global::AddressBook.Droid.Resource.Drawable.avd_show_password;
+			global::Acr.UserDialogs.Resource.Drawable.btn_checkbox_checked_mtrl = global::AddressBook.Droid.Resource.Drawable.btn_checkbox_checked_mtrl;
+			global::Acr.UserDialogs.Resource.Drawable.btn_checkbox_checked_to_unchecked_mtrl_animation = global::AddressBook.Droid.Resource.Drawable.btn_checkbox_checked_to_unchecked_mtrl_animation;
+			global::Acr.UserDialogs.Resource.Drawable.btn_checkbox_unchecked_mtrl = global::AddressBook.Droid.Resource.Drawable.btn_checkbox_unchecked_mtrl;
+			global::Acr.UserDialogs.Resource.Drawable.btn_checkbox_unchecked_to_checked_mtrl_animation = global::AddressBook.Droid.Resource.Drawable.btn_checkbox_unchecked_to_checked_mtrl_animation;
+			global::Acr.UserDialogs.Resource.Drawable.btn_radio_off_mtrl = global::AddressBook.Droid.Resource.Drawable.btn_radio_off_mtrl;
+			global::Acr.UserDialogs.Resource.Drawable.btn_radio_off_to_on_mtrl_animation = global::AddressBook.Droid.Resource.Drawable.btn_radio_off_to_on_mtrl_animation;
+			global::Acr.UserDialogs.Resource.Drawable.btn_radio_on_mtrl = global::AddressBook.Droid.Resource.Drawable.btn_radio_on_mtrl;
+			global::Acr.UserDialogs.Resource.Drawable.btn_radio_on_to_off_mtrl_animation = global::AddressBook.Droid.Resource.Drawable.btn_radio_on_to_off_mtrl_animation;
 			global::Acr.UserDialogs.Resource.Drawable.design_bottom_navigation_item_background = global::AddressBook.Droid.Resource.Drawable.design_bottom_navigation_item_background;
 			global::Acr.UserDialogs.Resource.Drawable.design_fab_background = global::AddressBook.Droid.Resource.Drawable.design_fab_background;
 			global::Acr.UserDialogs.Resource.Drawable.design_ic_visibility = global::AddressBook.Droid.Resource.Drawable.design_ic_visibility;
@@ -1003,6 +1043,39 @@ namespace AddressBook.Droid
 			global::Acr.UserDialogs.Resource.Drawable.roundedbgdark = global::AddressBook.Droid.Resource.Drawable.roundedbgdark;
 			global::Acr.UserDialogs.Resource.Drawable.tooltip_frame_dark = global::AddressBook.Droid.Resource.Drawable.tooltip_frame_dark;
 			global::Acr.UserDialogs.Resource.Drawable.tooltip_frame_light = global::AddressBook.Droid.Resource.Drawable.tooltip_frame_light;
+			global::Acr.UserDialogs.Resource.Id.accessibility_action_clickable_span = global::AddressBook.Droid.Resource.Id.accessibility_action_clickable_span;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_0 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_0;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_1 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_1;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_10 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_10;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_11 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_11;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_12 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_12;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_13 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_13;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_14 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_14;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_15 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_15;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_16 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_16;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_17 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_17;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_18 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_18;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_19 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_19;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_2 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_2;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_20 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_20;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_21 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_21;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_22 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_22;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_23 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_23;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_24 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_24;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_25 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_25;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_26 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_26;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_27 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_27;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_28 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_28;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_29 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_29;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_3 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_3;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_30 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_30;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_31 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_31;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_4 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_4;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_5 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_5;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_6 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_6;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_7 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_7;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_8 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_8;
+			global::Acr.UserDialogs.Resource.Id.accessibility_custom_action_9 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_9;
 			global::Acr.UserDialogs.Resource.Id.actions = global::AddressBook.Droid.Resource.Id.actions;
 			global::Acr.UserDialogs.Resource.Id.action_bar = global::AddressBook.Droid.Resource.Id.action_bar;
 			global::Acr.UserDialogs.Resource.Id.action_bar_activity_content = global::AddressBook.Droid.Resource.Id.action_bar_activity_content;
@@ -1037,6 +1110,7 @@ namespace AddressBook.Droid
 			global::Acr.UserDialogs.Resource.Id.center_horizontal = global::AddressBook.Droid.Resource.Id.center_horizontal;
 			global::Acr.UserDialogs.Resource.Id.center_vertical = global::AddressBook.Droid.Resource.Id.center_vertical;
 			global::Acr.UserDialogs.Resource.Id.checkbox = global::AddressBook.Droid.Resource.Id.checkbox;
+			global::Acr.UserDialogs.Resource.Id.@checked = global::AddressBook.Droid.Resource.Id.@checked;
 			global::Acr.UserDialogs.Resource.Id.chronometer = global::AddressBook.Droid.Resource.Id.chronometer;
 			global::Acr.UserDialogs.Resource.Id.clip_horizontal = global::AddressBook.Droid.Resource.Id.clip_horizontal;
 			global::Acr.UserDialogs.Resource.Id.clip_vertical = global::AddressBook.Droid.Resource.Id.clip_vertical;
@@ -1055,6 +1129,7 @@ namespace AddressBook.Droid
 			global::Acr.UserDialogs.Resource.Id.design_menu_item_action_area_stub = global::AddressBook.Droid.Resource.Id.design_menu_item_action_area_stub;
 			global::Acr.UserDialogs.Resource.Id.design_menu_item_text = global::AddressBook.Droid.Resource.Id.design_menu_item_text;
 			global::Acr.UserDialogs.Resource.Id.design_navigation_view = global::AddressBook.Droid.Resource.Id.design_navigation_view;
+			global::Acr.UserDialogs.Resource.Id.dialog_button = global::AddressBook.Droid.Resource.Id.dialog_button;
 			global::Acr.UserDialogs.Resource.Id.disableHome = global::AddressBook.Droid.Resource.Id.disableHome;
 			global::Acr.UserDialogs.Resource.Id.edit_query = global::AddressBook.Droid.Resource.Id.edit_query;
 			global::Acr.UserDialogs.Resource.Id.end = global::AddressBook.Droid.Resource.Id.end;
@@ -1071,6 +1146,7 @@ namespace AddressBook.Droid
 			global::Acr.UserDialogs.Resource.Id.forever = global::AddressBook.Droid.Resource.Id.forever;
 			global::Acr.UserDialogs.Resource.Id.FUNCTION = global::AddressBook.Droid.Resource.Id.FUNCTION;
 			global::Acr.UserDialogs.Resource.Id.ghost_view = global::AddressBook.Droid.Resource.Id.ghost_view;
+			global::Acr.UserDialogs.Resource.Id.ghost_view_holder = global::AddressBook.Droid.Resource.Id.ghost_view_holder;
 			global::Acr.UserDialogs.Resource.Id.group_divider = global::AddressBook.Droid.Resource.Id.group_divider;
 			global::Acr.UserDialogs.Resource.Id.home = global::AddressBook.Droid.Resource.Id.home;
 			global::Acr.UserDialogs.Resource.Id.homeAsUp = global::AddressBook.Droid.Resource.Id.homeAsUp;
@@ -1106,6 +1182,8 @@ namespace AddressBook.Droid
 			global::Acr.UserDialogs.Resource.Id.notification_background = global::AddressBook.Droid.Resource.Id.notification_background;
 			global::Acr.UserDialogs.Resource.Id.notification_main_column = global::AddressBook.Droid.Resource.Id.notification_main_column;
 			global::Acr.UserDialogs.Resource.Id.notification_main_column_container = global::AddressBook.Droid.Resource.Id.notification_main_column_container;
+			global::Acr.UserDialogs.Resource.Id.off = global::AddressBook.Droid.Resource.Id.off;
+			global::Acr.UserDialogs.Resource.Id.on = global::AddressBook.Droid.Resource.Id.on;
 			global::Acr.UserDialogs.Resource.Id.outline = global::AddressBook.Droid.Resource.Id.outline;
 			global::Acr.UserDialogs.Resource.Id.parallax = global::AddressBook.Droid.Resource.Id.parallax;
 			global::Acr.UserDialogs.Resource.Id.parentPanel = global::AddressBook.Droid.Resource.Id.parentPanel;
@@ -1118,6 +1196,7 @@ namespace AddressBook.Droid
 			global::Acr.UserDialogs.Resource.Id.right_icon = global::AddressBook.Droid.Resource.Id.right_icon;
 			global::Acr.UserDialogs.Resource.Id.right_side = global::AddressBook.Droid.Resource.Id.right_side;
 			global::Acr.UserDialogs.Resource.Id.save_non_transition_alpha = global::AddressBook.Droid.Resource.Id.save_non_transition_alpha;
+			global::Acr.UserDialogs.Resource.Id.save_overlay_view = global::AddressBook.Droid.Resource.Id.save_overlay_view;
 			global::Acr.UserDialogs.Resource.Id.screen = global::AddressBook.Droid.Resource.Id.screen;
 			global::Acr.UserDialogs.Resource.Id.scroll = global::AddressBook.Droid.Resource.Id.scroll;
 			global::Acr.UserDialogs.Resource.Id.scrollable = global::AddressBook.Droid.Resource.Id.scrollable;
@@ -1157,6 +1236,11 @@ namespace AddressBook.Droid
 			global::Acr.UserDialogs.Resource.Id.submit_area = global::AddressBook.Droid.Resource.Id.submit_area;
 			global::Acr.UserDialogs.Resource.Id.SYM = global::AddressBook.Droid.Resource.Id.SYM;
 			global::Acr.UserDialogs.Resource.Id.tabMode = global::AddressBook.Droid.Resource.Id.tabMode;
+			global::Acr.UserDialogs.Resource.Id.tag_accessibility_actions = global::AddressBook.Droid.Resource.Id.tag_accessibility_actions;
+			global::Acr.UserDialogs.Resource.Id.tag_accessibility_clickable_spans = global::AddressBook.Droid.Resource.Id.tag_accessibility_clickable_spans;
+			global::Acr.UserDialogs.Resource.Id.tag_accessibility_heading = global::AddressBook.Droid.Resource.Id.tag_accessibility_heading;
+			global::Acr.UserDialogs.Resource.Id.tag_accessibility_pane_title = global::AddressBook.Droid.Resource.Id.tag_accessibility_pane_title;
+			global::Acr.UserDialogs.Resource.Id.tag_screen_reader_focusable = global::AddressBook.Droid.Resource.Id.tag_screen_reader_focusable;
 			global::Acr.UserDialogs.Resource.Id.tag_transition_group = global::AddressBook.Droid.Resource.Id.tag_transition_group;
 			global::Acr.UserDialogs.Resource.Id.tag_unhandled_key_event_manager = global::AddressBook.Droid.Resource.Id.tag_unhandled_key_event_manager;
 			global::Acr.UserDialogs.Resource.Id.tag_unhandled_key_listeners = global::AddressBook.Droid.Resource.Id.tag_unhandled_key_listeners;
@@ -1182,6 +1266,7 @@ namespace AddressBook.Droid
 			global::Acr.UserDialogs.Resource.Id.transition_position = global::AddressBook.Droid.Resource.Id.transition_position;
 			global::Acr.UserDialogs.Resource.Id.transition_scene_layoutid_cache = global::AddressBook.Droid.Resource.Id.transition_scene_layoutid_cache;
 			global::Acr.UserDialogs.Resource.Id.transition_transform = global::AddressBook.Droid.Resource.Id.transition_transform;
+			global::Acr.UserDialogs.Resource.Id.@unchecked = global::AddressBook.Droid.Resource.Id.@unchecked;
 			global::Acr.UserDialogs.Resource.Id.uniform = global::AddressBook.Droid.Resource.Id.uniform;
 			global::Acr.UserDialogs.Resource.Id.unlabeled = global::AddressBook.Droid.Resource.Id.unlabeled;
 			global::Acr.UserDialogs.Resource.Id.up = global::AddressBook.Droid.Resource.Id.up;
@@ -1205,6 +1290,13 @@ namespace AddressBook.Droid
 			global::Acr.UserDialogs.Resource.Integer.mtrl_tab_indicator_anim_duration_ms = global::AddressBook.Droid.Resource.Integer.mtrl_tab_indicator_anim_duration_ms;
 			global::Acr.UserDialogs.Resource.Integer.show_password_duration = global::AddressBook.Droid.Resource.Integer.show_password_duration;
 			global::Acr.UserDialogs.Resource.Integer.status_bar_notification_info_maxnum = global::AddressBook.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Acr.UserDialogs.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_0 = global::AddressBook.Droid.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_0;
+			global::Acr.UserDialogs.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_1 = global::AddressBook.Droid.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_1;
+			global::Acr.UserDialogs.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_0 = global::AddressBook.Droid.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_0;
+			global::Acr.UserDialogs.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_1 = global::AddressBook.Droid.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_1;
+			global::Acr.UserDialogs.Resource.Interpolator.btn_radio_to_off_mtrl_animation_interpolator_0 = global::AddressBook.Droid.Resource.Interpolator.btn_radio_to_off_mtrl_animation_interpolator_0;
+			global::Acr.UserDialogs.Resource.Interpolator.btn_radio_to_on_mtrl_animation_interpolator_0 = global::AddressBook.Droid.Resource.Interpolator.btn_radio_to_on_mtrl_animation_interpolator_0;
+			global::Acr.UserDialogs.Resource.Interpolator.fast_out_slow_in = global::AddressBook.Droid.Resource.Interpolator.fast_out_slow_in;
 			global::Acr.UserDialogs.Resource.Interpolator.mtrl_fast_out_linear_in = global::AddressBook.Droid.Resource.Interpolator.mtrl_fast_out_linear_in;
 			global::Acr.UserDialogs.Resource.Interpolator.mtrl_fast_out_slow_in = global::AddressBook.Droid.Resource.Interpolator.mtrl_fast_out_slow_in;
 			global::Acr.UserDialogs.Resource.Interpolator.mtrl_linear = global::AddressBook.Droid.Resource.Interpolator.mtrl_linear;
@@ -1237,6 +1329,7 @@ namespace AddressBook.Droid
 			global::Acr.UserDialogs.Resource.Layout.abc_search_view = global::AddressBook.Droid.Resource.Layout.abc_search_view;
 			global::Acr.UserDialogs.Resource.Layout.abc_select_dialog_material = global::AddressBook.Droid.Resource.Layout.abc_select_dialog_material;
 			global::Acr.UserDialogs.Resource.Layout.abc_tooltip = global::AddressBook.Droid.Resource.Layout.abc_tooltip;
+			global::Acr.UserDialogs.Resource.Layout.custom_dialog = global::AddressBook.Droid.Resource.Layout.custom_dialog;
 			global::Acr.UserDialogs.Resource.Layout.design_bottom_navigation_item = global::AddressBook.Droid.Resource.Layout.design_bottom_navigation_item;
 			global::Acr.UserDialogs.Resource.Layout.design_bottom_sheet_dialog = global::AddressBook.Droid.Resource.Layout.design_bottom_sheet_dialog;
 			global::Acr.UserDialogs.Resource.Layout.design_layout_snackbar = global::AddressBook.Droid.Resource.Layout.design_layout_snackbar;
@@ -1496,6 +1589,7 @@ namespace AddressBook.Droid
 			global::Acr.UserDialogs.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::AddressBook.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
 			global::Acr.UserDialogs.Resource.Style.Base_Widget_AppCompat_Spinner = global::AddressBook.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
 			global::Acr.UserDialogs.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::AddressBook.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::Acr.UserDialogs.Resource.Style.Base_Widget_AppCompat_TextView = global::AddressBook.Droid.Resource.Style.Base_Widget_AppCompat_TextView;
 			global::Acr.UserDialogs.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::AddressBook.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
 			global::Acr.UserDialogs.Resource.Style.Base_Widget_AppCompat_Toolbar = global::AddressBook.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
 			global::Acr.UserDialogs.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::AddressBook.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
@@ -1620,6 +1714,8 @@ namespace AddressBook.Droid
 			global::Acr.UserDialogs.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::AddressBook.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
 			global::Acr.UserDialogs.Resource.Style.ThemeOverlay_AppCompat_Dark = global::AddressBook.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
 			global::Acr.UserDialogs.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::AddressBook.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Acr.UserDialogs.Resource.Style.ThemeOverlay_AppCompat_DayNight = global::AddressBook.Droid.Resource.Style.ThemeOverlay_AppCompat_DayNight;
+			global::Acr.UserDialogs.Resource.Style.ThemeOverlay_AppCompat_DayNight_ActionBar = global::AddressBook.Droid.Resource.Style.ThemeOverlay_AppCompat_DayNight_ActionBar;
 			global::Acr.UserDialogs.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::AddressBook.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog;
 			global::Acr.UserDialogs.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::AddressBook.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
 			global::Acr.UserDialogs.Resource.Style.ThemeOverlay_AppCompat_Light = global::AddressBook.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
@@ -1752,6 +1848,7 @@ namespace AddressBook.Droid
 			global::Acr.UserDialogs.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::AddressBook.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
 			global::Acr.UserDialogs.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::AddressBook.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
 			global::Acr.UserDialogs.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::AddressBook.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::Acr.UserDialogs.Resource.Style.Widget_AppCompat_TextView = global::AddressBook.Droid.Resource.Style.Widget_AppCompat_TextView;
 			global::Acr.UserDialogs.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::AddressBook.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
 			global::Acr.UserDialogs.Resource.Style.Widget_AppCompat_Toolbar = global::AddressBook.Droid.Resource.Style.Widget_AppCompat_Toolbar;
 			global::Acr.UserDialogs.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::AddressBook.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
@@ -1913,11 +2010,21 @@ namespace AddressBook.Droid
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTextView_autoSizePresetSizes = global::AddressBook.Droid.Resource.Styleable.AppCompatTextView_autoSizePresetSizes;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity = global::AddressBook.Droid.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTextView_autoSizeTextType = global::AddressBook.Droid.Resource.Styleable.AppCompatTextView_autoSizeTextType;
+			global::Acr.UserDialogs.Resource.Styleable.AppCompatTextView_drawableBottomCompat = global::AddressBook.Droid.Resource.Styleable.AppCompatTextView_drawableBottomCompat;
+			global::Acr.UserDialogs.Resource.Styleable.AppCompatTextView_drawableEndCompat = global::AddressBook.Droid.Resource.Styleable.AppCompatTextView_drawableEndCompat;
+			global::Acr.UserDialogs.Resource.Styleable.AppCompatTextView_drawableLeftCompat = global::AddressBook.Droid.Resource.Styleable.AppCompatTextView_drawableLeftCompat;
+			global::Acr.UserDialogs.Resource.Styleable.AppCompatTextView_drawableRightCompat = global::AddressBook.Droid.Resource.Styleable.AppCompatTextView_drawableRightCompat;
+			global::Acr.UserDialogs.Resource.Styleable.AppCompatTextView_drawableStartCompat = global::AddressBook.Droid.Resource.Styleable.AppCompatTextView_drawableStartCompat;
+			global::Acr.UserDialogs.Resource.Styleable.AppCompatTextView_drawableTint = global::AddressBook.Droid.Resource.Styleable.AppCompatTextView_drawableTint;
+			global::Acr.UserDialogs.Resource.Styleable.AppCompatTextView_drawableTintMode = global::AddressBook.Droid.Resource.Styleable.AppCompatTextView_drawableTintMode;
+			global::Acr.UserDialogs.Resource.Styleable.AppCompatTextView_drawableTopCompat = global::AddressBook.Droid.Resource.Styleable.AppCompatTextView_drawableTopCompat;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight = global::AddressBook.Droid.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTextView_fontFamily = global::AddressBook.Droid.Resource.Styleable.AppCompatTextView_fontFamily;
+			global::Acr.UserDialogs.Resource.Styleable.AppCompatTextView_fontVariationSettings = global::AddressBook.Droid.Resource.Styleable.AppCompatTextView_fontVariationSettings;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight = global::AddressBook.Droid.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTextView_lineHeight = global::AddressBook.Droid.Resource.Styleable.AppCompatTextView_lineHeight;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTextView_textAllCaps = global::AddressBook.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::Acr.UserDialogs.Resource.Styleable.AppCompatTextView_textLocale = global::AddressBook.Droid.Resource.Styleable.AppCompatTextView_textLocale;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTheme = global::AddressBook.Droid.Resource.Styleable.AppCompatTheme;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTheme_actionBarDivider = global::AddressBook.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::AddressBook.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
@@ -1991,14 +2098,18 @@ namespace AddressBook.Droid
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::AddressBook.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::AddressBook.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::AddressBook.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::Acr.UserDialogs.Resource.Styleable.AppCompatTheme_listChoiceIndicatorMultipleAnimated = global::AddressBook.Droid.Resource.Styleable.AppCompatTheme_listChoiceIndicatorMultipleAnimated;
+			global::Acr.UserDialogs.Resource.Styleable.AppCompatTheme_listChoiceIndicatorSingleAnimated = global::AddressBook.Droid.Resource.Styleable.AppCompatTheme_listChoiceIndicatorSingleAnimated;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::AddressBook.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::AddressBook.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::AddressBook.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::AddressBook.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::AddressBook.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::AddressBook.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::Acr.UserDialogs.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingEnd = global::AddressBook.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingEnd;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::AddressBook.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::AddressBook.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::Acr.UserDialogs.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingStart = global::AddressBook.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingStart;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTheme_panelBackground = global::AddressBook.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::AddressBook.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
 			global::Acr.UserDialogs.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::AddressBook.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
@@ -2147,6 +2258,7 @@ namespace AddressBook.Droid
 			global::Acr.UserDialogs.Resource.Styleable.ColorStateListItem_android_color = global::AddressBook.Droid.Resource.Styleable.ColorStateListItem_android_color;
 			global::Acr.UserDialogs.Resource.Styleable.CompoundButton = global::AddressBook.Droid.Resource.Styleable.CompoundButton;
 			global::Acr.UserDialogs.Resource.Styleable.CompoundButton_android_button = global::AddressBook.Droid.Resource.Styleable.CompoundButton_android_button;
+			global::Acr.UserDialogs.Resource.Styleable.CompoundButton_buttonCompat = global::AddressBook.Droid.Resource.Styleable.CompoundButton_buttonCompat;
 			global::Acr.UserDialogs.Resource.Styleable.CompoundButton_buttonTint = global::AddressBook.Droid.Resource.Styleable.CompoundButton_buttonTint;
 			global::Acr.UserDialogs.Resource.Styleable.CompoundButton_buttonTintMode = global::AddressBook.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
 			global::Acr.UserDialogs.Resource.Styleable.CoordinatorLayout = global::AddressBook.Droid.Resource.Styleable.CoordinatorLayout;
@@ -2377,6 +2489,7 @@ namespace AddressBook.Droid
 			global::Acr.UserDialogs.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::AddressBook.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
 			global::Acr.UserDialogs.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::AddressBook.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle;
 			global::Acr.UserDialogs.Resource.Styleable.RecyclerView = global::AddressBook.Droid.Resource.Styleable.RecyclerView;
+			global::Acr.UserDialogs.Resource.Styleable.RecyclerView_android_clipToPadding = global::AddressBook.Droid.Resource.Styleable.RecyclerView_android_clipToPadding;
 			global::Acr.UserDialogs.Resource.Styleable.RecyclerView_android_descendantFocusability = global::AddressBook.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability;
 			global::Acr.UserDialogs.Resource.Styleable.RecyclerView_android_orientation = global::AddressBook.Droid.Resource.Styleable.RecyclerView_android_orientation;
 			global::Acr.UserDialogs.Resource.Styleable.RecyclerView_fastScrollEnabled = global::AddressBook.Droid.Resource.Styleable.RecyclerView_fastScrollEnabled;
@@ -2486,11 +2599,14 @@ namespace AddressBook.Droid
 			global::Acr.UserDialogs.Resource.Styleable.TextAppearance_android_textColor = global::AddressBook.Droid.Resource.Styleable.TextAppearance_android_textColor;
 			global::Acr.UserDialogs.Resource.Styleable.TextAppearance_android_textColorHint = global::AddressBook.Droid.Resource.Styleable.TextAppearance_android_textColorHint;
 			global::Acr.UserDialogs.Resource.Styleable.TextAppearance_android_textColorLink = global::AddressBook.Droid.Resource.Styleable.TextAppearance_android_textColorLink;
+			global::Acr.UserDialogs.Resource.Styleable.TextAppearance_android_textFontWeight = global::AddressBook.Droid.Resource.Styleable.TextAppearance_android_textFontWeight;
 			global::Acr.UserDialogs.Resource.Styleable.TextAppearance_android_textSize = global::AddressBook.Droid.Resource.Styleable.TextAppearance_android_textSize;
 			global::Acr.UserDialogs.Resource.Styleable.TextAppearance_android_textStyle = global::AddressBook.Droid.Resource.Styleable.TextAppearance_android_textStyle;
 			global::Acr.UserDialogs.Resource.Styleable.TextAppearance_android_typeface = global::AddressBook.Droid.Resource.Styleable.TextAppearance_android_typeface;
 			global::Acr.UserDialogs.Resource.Styleable.TextAppearance_fontFamily = global::AddressBook.Droid.Resource.Styleable.TextAppearance_fontFamily;
+			global::Acr.UserDialogs.Resource.Styleable.TextAppearance_fontVariationSettings = global::AddressBook.Droid.Resource.Styleable.TextAppearance_fontVariationSettings;
 			global::Acr.UserDialogs.Resource.Styleable.TextAppearance_textAllCaps = global::AddressBook.Droid.Resource.Styleable.TextAppearance_textAllCaps;
+			global::Acr.UserDialogs.Resource.Styleable.TextAppearance_textLocale = global::AddressBook.Droid.Resource.Styleable.TextAppearance_textLocale;
 			global::Acr.UserDialogs.Resource.Styleable.TextInputLayout = global::AddressBook.Droid.Resource.Styleable.TextInputLayout;
 			global::Acr.UserDialogs.Resource.Styleable.TextInputLayout_android_hint = global::AddressBook.Droid.Resource.Styleable.TextInputLayout_android_hint;
 			global::Acr.UserDialogs.Resource.Styleable.TextInputLayout_android_textColorHint = global::AddressBook.Droid.Resource.Styleable.TextInputLayout_android_textColorHint;
@@ -2539,6 +2655,7 @@ namespace AddressBook.Droid
 			global::Acr.UserDialogs.Resource.Styleable.Toolbar_logo = global::AddressBook.Droid.Resource.Styleable.Toolbar_logo;
 			global::Acr.UserDialogs.Resource.Styleable.Toolbar_logoDescription = global::AddressBook.Droid.Resource.Styleable.Toolbar_logoDescription;
 			global::Acr.UserDialogs.Resource.Styleable.Toolbar_maxButtonHeight = global::AddressBook.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::Acr.UserDialogs.Resource.Styleable.Toolbar_menu = global::AddressBook.Droid.Resource.Styleable.Toolbar_menu;
 			global::Acr.UserDialogs.Resource.Styleable.Toolbar_navigationContentDescription = global::AddressBook.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
 			global::Acr.UserDialogs.Resource.Styleable.Toolbar_navigationIcon = global::AddressBook.Droid.Resource.Styleable.Toolbar_navigationIcon;
 			global::Acr.UserDialogs.Resource.Styleable.Toolbar_popupTheme = global::AddressBook.Droid.Resource.Styleable.Toolbar_popupTheme;
@@ -4617,6 +4734,39 @@ namespace AddressBook.Droid
 			global::Xamarin.Essentials.Resource.Drawable.notification_template_icon_low_bg = global::AddressBook.Droid.Resource.Drawable.notification_template_icon_low_bg;
 			global::Xamarin.Essentials.Resource.Drawable.notification_tile_bg = global::AddressBook.Droid.Resource.Drawable.notification_tile_bg;
 			global::Xamarin.Essentials.Resource.Drawable.notify_panel_notification_icon_bg = global::AddressBook.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::Xamarin.Essentials.Resource.Id.accessibility_action_clickable_span = global::AddressBook.Droid.Resource.Id.accessibility_action_clickable_span;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_0 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_0;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_1 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_1;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_10 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_10;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_11 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_11;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_12 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_12;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_13 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_13;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_14 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_14;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_15 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_15;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_16 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_16;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_17 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_17;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_18 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_18;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_19 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_19;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_2 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_2;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_20 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_20;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_21 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_21;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_22 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_22;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_23 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_23;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_24 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_24;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_25 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_25;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_26 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_26;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_27 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_27;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_28 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_28;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_29 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_29;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_3 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_3;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_30 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_30;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_31 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_31;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_4 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_4;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_5 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_5;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_6 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_6;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_7 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_7;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_8 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_8;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_9 = global::AddressBook.Droid.Resource.Id.accessibility_custom_action_9;
 			global::Xamarin.Essentials.Resource.Id.actions = global::AddressBook.Droid.Resource.Id.actions;
 			global::Xamarin.Essentials.Resource.Id.action_container = global::AddressBook.Droid.Resource.Id.action_container;
 			global::Xamarin.Essentials.Resource.Id.action_divider = global::AddressBook.Droid.Resource.Id.action_divider;
@@ -4637,6 +4787,7 @@ namespace AddressBook.Droid
 			global::Xamarin.Essentials.Resource.Id.chronometer = global::AddressBook.Droid.Resource.Id.chronometer;
 			global::Xamarin.Essentials.Resource.Id.clip_horizontal = global::AddressBook.Droid.Resource.Id.clip_horizontal;
 			global::Xamarin.Essentials.Resource.Id.clip_vertical = global::AddressBook.Droid.Resource.Id.clip_vertical;
+			global::Xamarin.Essentials.Resource.Id.dialog_button = global::AddressBook.Droid.Resource.Id.dialog_button;
 			global::Xamarin.Essentials.Resource.Id.end = global::AddressBook.Droid.Resource.Id.end;
 			global::Xamarin.Essentials.Resource.Id.fill = global::AddressBook.Droid.Resource.Id.fill;
 			global::Xamarin.Essentials.Resource.Id.fill_horizontal = global::AddressBook.Droid.Resource.Id.fill_horizontal;
@@ -4658,6 +4809,11 @@ namespace AddressBook.Droid
 			global::Xamarin.Essentials.Resource.Id.right_icon = global::AddressBook.Droid.Resource.Id.right_icon;
 			global::Xamarin.Essentials.Resource.Id.right_side = global::AddressBook.Droid.Resource.Id.right_side;
 			global::Xamarin.Essentials.Resource.Id.start = global::AddressBook.Droid.Resource.Id.start;
+			global::Xamarin.Essentials.Resource.Id.tag_accessibility_actions = global::AddressBook.Droid.Resource.Id.tag_accessibility_actions;
+			global::Xamarin.Essentials.Resource.Id.tag_accessibility_clickable_spans = global::AddressBook.Droid.Resource.Id.tag_accessibility_clickable_spans;
+			global::Xamarin.Essentials.Resource.Id.tag_accessibility_heading = global::AddressBook.Droid.Resource.Id.tag_accessibility_heading;
+			global::Xamarin.Essentials.Resource.Id.tag_accessibility_pane_title = global::AddressBook.Droid.Resource.Id.tag_accessibility_pane_title;
+			global::Xamarin.Essentials.Resource.Id.tag_screen_reader_focusable = global::AddressBook.Droid.Resource.Id.tag_screen_reader_focusable;
 			global::Xamarin.Essentials.Resource.Id.tag_transition_group = global::AddressBook.Droid.Resource.Id.tag_transition_group;
 			global::Xamarin.Essentials.Resource.Id.tag_unhandled_key_event_manager = global::AddressBook.Droid.Resource.Id.tag_unhandled_key_event_manager;
 			global::Xamarin.Essentials.Resource.Id.tag_unhandled_key_listeners = global::AddressBook.Droid.Resource.Id.tag_unhandled_key_listeners;
@@ -4669,6 +4825,7 @@ namespace AddressBook.Droid
 			global::Xamarin.Essentials.Resource.Integer.status_bar_notification_info_maxnum = global::AddressBook.Droid.Resource.Integer.status_bar_notification_info_maxnum;
 			global::Xamarin.Essentials.Resource.Layout.browser_actions_context_menu_page = global::AddressBook.Droid.Resource.Layout.browser_actions_context_menu_page;
 			global::Xamarin.Essentials.Resource.Layout.browser_actions_context_menu_row = global::AddressBook.Droid.Resource.Layout.browser_actions_context_menu_row;
+			global::Xamarin.Essentials.Resource.Layout.custom_dialog = global::AddressBook.Droid.Resource.Layout.custom_dialog;
 			global::Xamarin.Essentials.Resource.Layout.notification_action = global::AddressBook.Droid.Resource.Layout.notification_action;
 			global::Xamarin.Essentials.Resource.Layout.notification_action_tombstone = global::AddressBook.Droid.Resource.Layout.notification_action_tombstone;
 			global::Xamarin.Essentials.Resource.Layout.notification_template_custom_big = global::AddressBook.Droid.Resource.Layout.notification_template_custom_big;
@@ -15926,22 +16083,31 @@ namespace AddressBook.Droid
 			public const int icon_background = 2131165299;
 			
 			// aapt resource value: 0x7F070074
-			public const int icon_contacts_list = 2131165300;
+			public const int icon_contacts_outline = 2131165300;
 			
 			// aapt resource value: 0x7F070075
-			public const int icon_create = 2131165301;
+			public const int icon_contacts_solid = 2131165301;
 			
 			// aapt resource value: 0x7F070076
-			public const int icon_delete = 2131165302;
+			public const int icon_create = 2131165302;
 			
 			// aapt resource value: 0x7F070077
-			public const int icon_foreground = 2131165303;
+			public const int icon_delete = 2131165303;
 			
 			// aapt resource value: 0x7F070078
-			public const int icon_info = 2131165304;
+			public const int icon_foreground = 2131165304;
 			
 			// aapt resource value: 0x7F070079
-			public const int icon_save = 2131165305;
+			public const int icon_info_outline = 2131165305;
+			
+			// aapt resource value: 0x7F07007A
+			public const int icon_info_solid = 2131165306;
+			
+			// aapt resource value: 0x7F07007B
+			public const int icon_save = 2131165307;
+			
+			// aapt resource value: 0x7F07007C
+			public const int icon_settings = 2131165308;
 			
 			// aapt resource value: 0x7F07006D
 			public const int ic_errorstatus = 2131165293;
@@ -15958,71 +16124,71 @@ namespace AddressBook.Droid
 			// aapt resource value: 0x7F070071
 			public const int ic_successstatus = 2131165297;
 			
-			// aapt resource value: 0x7F07007A
-			public const int launch_screen = 2131165306;
-			
-			// aapt resource value: 0x7F07007B
-			public const int MaterialActivityIndicatorBackground = 2131165307;
-			
-			// aapt resource value: 0x7F07007C
-			public const int MaterialProgressBar = 2131165308;
-			
 			// aapt resource value: 0x7F07007D
-			public const int mtrl_snackbar_background = 2131165309;
+			public const int launch_screen = 2131165309;
 			
 			// aapt resource value: 0x7F07007E
-			public const int mtrl_tabs_default_indicator = 2131165310;
+			public const int MaterialActivityIndicatorBackground = 2131165310;
 			
 			// aapt resource value: 0x7F07007F
-			public const int navigation_empty_icon = 2131165311;
+			public const int MaterialProgressBar = 2131165311;
 			
 			// aapt resource value: 0x7F070080
-			public const int notification_action_background = 2131165312;
+			public const int mtrl_snackbar_background = 2131165312;
 			
 			// aapt resource value: 0x7F070081
-			public const int notification_bg = 2131165313;
+			public const int mtrl_tabs_default_indicator = 2131165313;
 			
 			// aapt resource value: 0x7F070082
-			public const int notification_bg_low = 2131165314;
+			public const int navigation_empty_icon = 2131165314;
 			
 			// aapt resource value: 0x7F070083
-			public const int notification_bg_low_normal = 2131165315;
+			public const int notification_action_background = 2131165315;
 			
 			// aapt resource value: 0x7F070084
-			public const int notification_bg_low_pressed = 2131165316;
+			public const int notification_bg = 2131165316;
 			
 			// aapt resource value: 0x7F070085
-			public const int notification_bg_normal = 2131165317;
+			public const int notification_bg_low = 2131165317;
 			
 			// aapt resource value: 0x7F070086
-			public const int notification_bg_normal_pressed = 2131165318;
+			public const int notification_bg_low_normal = 2131165318;
 			
 			// aapt resource value: 0x7F070087
-			public const int notification_icon_background = 2131165319;
+			public const int notification_bg_low_pressed = 2131165319;
 			
 			// aapt resource value: 0x7F070088
-			public const int notification_template_icon_bg = 2131165320;
+			public const int notification_bg_normal = 2131165320;
 			
 			// aapt resource value: 0x7F070089
-			public const int notification_template_icon_low_bg = 2131165321;
+			public const int notification_bg_normal_pressed = 2131165321;
 			
 			// aapt resource value: 0x7F07008A
-			public const int notification_tile_bg = 2131165322;
+			public const int notification_icon_background = 2131165322;
 			
 			// aapt resource value: 0x7F07008B
-			public const int notify_panel_notification_icon_bg = 2131165323;
+			public const int notification_template_icon_bg = 2131165323;
 			
 			// aapt resource value: 0x7F07008C
-			public const int roundedbg = 2131165324;
+			public const int notification_template_icon_low_bg = 2131165324;
 			
 			// aapt resource value: 0x7F07008D
-			public const int roundedbgdark = 2131165325;
+			public const int notification_tile_bg = 2131165325;
 			
 			// aapt resource value: 0x7F07008E
-			public const int tooltip_frame_dark = 2131165326;
+			public const int notify_panel_notification_icon_bg = 2131165326;
 			
 			// aapt resource value: 0x7F07008F
-			public const int tooltip_frame_light = 2131165327;
+			public const int roundedbg = 2131165327;
+			
+			// aapt resource value: 0x7F070090
+			public const int roundedbgdark = 2131165328;
+			
+			// aapt resource value: 0x7F070091
+			public const int tooltip_frame_dark = 2131165329;
+			
+			// aapt resource value: 0x7F070092
+			public const int tooltip_frame_light = 2131165330;
 			
 			static Drawable()
 			{

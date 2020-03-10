@@ -1,0 +1,44 @@
+﻿<ContentPage
+    x:Class="AddressBook.Views.SettingsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+    xmlns:viewmodels="clr-namespace:AddressBook.ViewModels"
+    Title="Settings"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    x:DataType="viewmodels:SettingsPageViewModel"
+    Shell.PresentationMode="ModalAnimated"
+    Visual="Material"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <StackLayout Padding="16">
+            <Label
+                FontSize="Title"
+                HorizontalOptions="Start"
+                Text="Settings"
+                TextColor="Black" />
+            <Frame
+                Margin="0,16,0,0"
+                Padding="8"
+                CornerRadius="0"
+                HorizontalOptions="Fill"
+                VerticalOptions="Start">
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        FontSize="Subtitle"
+                        HorizontalOptions="Start"
+                        Text="Turn off the lights!"
+                        TextColor="Black"
+                        VerticalOptions="Center" />
+
+                    <Switch
+                        HorizontalOptions="EndAndExpand"
+                        IsToggled="{Binding IsDarkThemeEnabled, Mode=TwoWay}"
+                        VerticalOptions="Center" />
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

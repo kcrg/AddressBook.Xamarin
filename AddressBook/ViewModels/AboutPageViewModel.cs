@@ -3,17 +3,21 @@ using Prism.Commands;
 using Prism.Mvvm;
 using System;
 using Xamarin.Essentials;
+using Xamarin.Forms;
 
 namespace AddressBook.ViewModels
 {
     public class AboutPageViewModel : BindableBase
     {
+        public DelegateCommand SettingsCommand { get; }
         public DelegateCommand PhoneTappedCommand { get; }
         public DelegateCommand EmailTappedCommand { get; }
         public DelegateCommand OpenGithubCommand { get; }
 
         public AboutPageViewModel()
         {
+            SettingsCommand = new DelegateCommand(() => MainThread.BeginInvokeOnMainThread(async () => await Shell.Current.GoToAsync("contactlist/settings").ConfigureAwait(false)));
+
             PhoneTappedCommand = new DelegateCommand(() =>
             {
                 try

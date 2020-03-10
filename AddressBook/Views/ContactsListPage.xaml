@@ -7,8 +7,10 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:models="clr-namespace:AddressBook.Models"
     xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+    xmlns:viewmodels="clr-namespace:AddressBook.ViewModels"
     Title="Contacts"
     prism:ViewModelLocator.AutowireViewModel="True"
+    x:DataType="viewmodels:ContactsListPageViewModel"
     Visual="Material"
     mc:Ignorable="d">
     <ContentPage.ToolbarItems>
@@ -21,11 +23,23 @@
                 </OnPlatform>
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
+        <ToolbarItem Command="{Binding SettingsCommand}" Text="Settings">
+            <ToolbarItem.IconImageSource>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android" Value="icon_settings.xml" />
+                    <On Platform="iOS" Value="" />
+                    <On Platform="UWP" Value="" />
+                </OnPlatform>
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
         <Grid>
-            <ActivityIndicator IsRunning="{Binding IsLoading}" IsVisible="{Binding IsLoading}" Style="{StaticResource ActivityIndicator}" />
+            <ActivityIndicator
+                IsRunning="{Binding IsLoading}"
+                IsVisible="{Binding IsLoading}"
+                Style="{StaticResource ActivityIndicator}" />
 
             <CollectionView
                 x:Name="collectionView"

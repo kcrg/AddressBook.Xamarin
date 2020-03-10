@@ -1,4 +1,5 @@
-﻿<Shell x:Class="AddressBook.Views.AppShell"
+﻿<Shell
+    x:Class="AddressBook.Views.AppShell"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:views="clr-namespace:AddressBook.Views"
@@ -8,29 +9,71 @@
     Shell.TabBarUnselectedColor="DarkGray"
     Shell.TitleColor="Black"
     Visual="Material">
-    <TabBar>
-        <Tab Title="Contacts">
-            <Tab.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="Android" Value="icon_contacts_list.xml"/>
-                    <On Platform="iOS" Value=""/>
-                    <On Platform="UWP" Value=""/>
-                </OnPlatform>
-            </Tab.Icon>
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style x:Key="ContactsTab" TargetType="Tab">
+                <Style.Triggers>
+                    <Trigger TargetType="Tab" Property="IsChecked" Value="False">
+                        <Setter Property="Icon">
+                            <Setter.Value>
+                                <OnPlatform x:TypeArguments="FileImageSource">
+                                    <On Platform="Android" Value="icon_contacts_outline.xml" />
+                                    <On Platform="iOS" Value="" />
+                                    <On Platform="UWP" Value="" />
+                                </OnPlatform>
+                            </Setter.Value>
+                        </Setter>
+                    </Trigger>
+                    <Trigger TargetType="Tab" Property="IsChecked" Value="True">
+                        <Setter Property="Icon">
+                            <Setter.Value>
+                                <OnPlatform x:TypeArguments="FileImageSource">
+                                    <On Platform="Android" Value="icon_contacts_solid.xml" />
+                                    <On Platform="iOS" Value="" />
+                                    <On Platform="UWP" Value="" />
+                                </OnPlatform>
+                            </Setter.Value>
+                        </Setter>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
 
-            <ShellContent ContentTemplate="{DataTemplate views:ContactsListPage}"/>
+            <Style x:Key="AboutTab" TargetType="Tab">
+                <Style.Triggers>
+                    <Trigger TargetType="Tab" Property="IsChecked" Value="False">
+                        <Setter Property="Icon">
+                            <Setter.Value>
+                                <OnPlatform x:TypeArguments="FileImageSource">
+                                    <On Platform="Android" Value="icon_info_outline.xml" />
+                                    <On Platform="iOS" Value="" />
+                                    <On Platform="UWP" Value="" />
+                                </OnPlatform>
+                            </Setter.Value>
+                        </Setter>
+                    </Trigger>
+                    <Trigger TargetType="Tab" Property="IsChecked" Value="True">
+                        <Setter Property="Icon">
+                            <Setter.Value>
+                                <OnPlatform x:TypeArguments="FileImageSource">
+                                    <On Platform="Android" Value="icon_info_solid.xml" />
+                                    <On Platform="iOS" Value="" />
+                                    <On Platform="UWP" Value="" />
+                                </OnPlatform>
+                            </Setter.Value>
+                        </Setter>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <TabBar>
+        <Tab Title="Contacts" Style="{StaticResource ContactsTab}">
+            <ShellContent ContentTemplate="{DataTemplate views:ContactsListPage}" />
         </Tab>
 
-        <Tab Title="About">
-            <Tab.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="Android" Value="icon_info.xml"/>
-                    <On Platform="iOS" Value=""/>
-                    <On Platform="UWP" Value=""/>
-                </OnPlatform>
-            </Tab.Icon>
-
-            <ShellContent ContentTemplate="{DataTemplate views:AboutPage}"/>
+        <Tab Title="About" Style="{StaticResource AboutTab}">
+            <ShellContent ContentTemplate="{DataTemplate views:AboutPage}" />
         </Tab>
     </TabBar>
 </Shell>

@@ -22,6 +22,7 @@ namespace AddressBook.ViewModels
 
         public ObservableCollection<ContactModel> ContactsList { get; }
         public DelegateCommand AddContactCommand { get; }
+        public DelegateCommand SettingsCommand { get; }
         public DelegateCommand<string> DeleteContactCommand { get; set; }
         public DelegateCommand<IReadOnlyList<object>> ItemTappedCommand { get; }
 
@@ -32,6 +33,8 @@ namespace AddressBook.ViewModels
             ContactsList = new ObservableCollection<ContactModel>();
 
             AddContactCommand = new DelegateCommand(() => MainThread.BeginInvokeOnMainThread(async () => await Shell.Current.GoToAsync("contactlist/contactcreate").ConfigureAwait(false)));
+
+            SettingsCommand = new DelegateCommand(() => MainThread.BeginInvokeOnMainThread(async () => await Shell.Current.GoToAsync("contactlist/settings").ConfigureAwait(false)));
 
             ItemTappedCommand = new DelegateCommand<IReadOnlyList<object>>((o) => ShowDetails(o, dialogService));
 
