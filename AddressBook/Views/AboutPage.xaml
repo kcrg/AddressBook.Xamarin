@@ -11,7 +11,7 @@
     x:DataType="viewmodels:AboutPageViewModel"
     Visual="Material"
     mc:Ignorable="d">
-    <ContentPage.ToolbarItems>
+    <!--<ContentPage.ToolbarItems>
         <ToolbarItem Command="{Binding SettingsCommand}" Text="Settings">
             <ToolbarItem.IconImageSource>
                 <OnPlatform x:TypeArguments="FileImageSource">
@@ -21,7 +21,7 @@
                 </OnPlatform>
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
-    </ContentPage.ToolbarItems>
+    </ContentPage.ToolbarItems>-->
 
     <ContentPage.Content>
         <Grid>

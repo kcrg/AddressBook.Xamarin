@@ -9,7 +9,7 @@
     Shell.TabBarUnselectedColor="DarkGray"
     Shell.TitleColor="Black"
     Visual="Material">
-    <Shell.Resources>
+    <!--<Shell.Resources>
         <ResourceDictionary>
             <Style x:Key="ContactsTab" TargetType="Tab">
                 <Style.Triggers>
@@ -65,14 +65,16 @@
                 </Style.Triggers>
             </Style>
         </ResourceDictionary>
-    </Shell.Resources>
+    </Shell.Resources>-->
 
     <TabBar>
-        <Tab Title="Contacts" Style="{StaticResource ContactsTab}">
+        <!--  Style="{StaticResource ContactsTab}"  -->
+        <Tab Title="Contacts" Icon="icon_contacts_solid.xml">
             <ShellContent ContentTemplate="{DataTemplate views:ContactsListPage}" />
         </Tab>
 
-        <Tab Title="About" Style="{StaticResource AboutTab}">
+        <!--  Style="{StaticResource AboutTab}"  -->
+        <Tab Title="About" Icon="icon_info_solid.xml">
             <ShellContent ContentTemplate="{DataTemplate views:AboutPage}" />
         </Tab>
     </TabBar>

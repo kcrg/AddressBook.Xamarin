@@ -23,7 +23,7 @@
                 </OnPlatform>
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
-        <ToolbarItem Command="{Binding SettingsCommand}" Text="Settings">
+        <!--<ToolbarItem Command="{Binding SettingsCommand}" Text="Settings">
             <ToolbarItem.IconImageSource>
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="Android" Value="icon_settings.xml" />
@@ -31,7 +31,7 @@
                     <On Platform="UWP" Value="" />
                 </OnPlatform>
             </ToolbarItem.IconImageSource>
-        </ToolbarItem>
+        </ToolbarItem>-->
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>

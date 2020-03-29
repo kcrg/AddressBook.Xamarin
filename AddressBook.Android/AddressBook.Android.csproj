@@ -72,7 +72,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Acr.UserDialogs">
-      <Version>7.1.0.440</Version>
+      <Version>7.1.0.442</Version>
     </PackageReference>
     <PackageReference Include="Prism.Forms">
       <Version>7.2.0.1422</Version>
@@ -84,12 +84,12 @@
       <Version>1.1.14</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Essentials">
-      <Version>1.5.1</Version>
+      <Version>1.5.2</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="4.7.0.425-nightly" />
+    <PackageReference Include="Xamarin.Forms" Version="4.7.0.512-nightly" />
     <PackageReference Include="Prism.DryIoc.Forms" Version="7.2.0.1422" />
     <PackageReference Include="Xamarin.Forms.Visual.Material">
-      <Version>4.7.0.425-nightly</Version>
+      <Version>4.7.0.512-nightly</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
