@@ -12,7 +12,7 @@
   </style>
 
   <!-- Base theme applied no matter what API -->
-  <style name="MainTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+  <style name="MainTheme.Base" parent="Theme.AppCompat.DayNight.DarkActionBar">
     <!--If you are using revision 22.1 please use just windowNoTitle. Without android:-->
     <item name="windowNoTitle">true</item>
     <!--We will be using the toolbar so no need to show ActionBar-->
@@ -47,8 +47,7 @@
   <color name="ListViewSelected">#F0F0F0</color>
   <color name="ListViewHighlighted">#F0F0F0</color>
 
-  <style name="AppCompatDialogStyle" parent="Theme.AppCompat.Light.Dialog">
-    <item name="colorAccent">@color/colorAccent</item>
+  <style name="AppCompatDialogStyle" parent="Theme.AppCompat.DayNight.Dialog">
   </style>
 
   <style name="DrawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">

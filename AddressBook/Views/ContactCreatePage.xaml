@@ -17,8 +17,8 @@
             <ToolbarItem.IconImageSource>
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="Android" Value="icon_save.xml" />
-                    <On Platform="iOS" Value="" />
-                    <On Platform="UWP" Value="" />
+                    <On Platform="iOS" Value="baseline_save.png" />
+                    <On Platform="UWP" Value="baseline_save.png" />
                 </OnPlatform>
             </ToolbarItem.IconImageSource>
         </ToolbarItem>

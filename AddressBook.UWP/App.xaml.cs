@@ -26,7 +26,7 @@ namespace AddressBook.UWP
 
                 rootFrame.NavigationFailed += OnNavigationFailed;
 
-                Forms.SetFlags("Shell_UWP_Experimental", "CollectionView_Experimental");
+                Forms.SetFlags("Shell_UWP_Experimental", "AppTheme_Experimental");
                 Forms.Init(e);
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)

@@ -14,8 +14,7 @@ namespace AddressBook.iOS
 
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            Forms.SetFlags("CollectionView_Experimental");
-
+            Forms.SetFlags("AppTheme_Experimental");
             Forms.Init();
             FormsMaterial.Init();
 

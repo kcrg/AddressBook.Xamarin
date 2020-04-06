@@ -9,17 +9,18 @@
     Shell.TabBarUnselectedColor="DarkGray"
     Shell.TitleColor="Black"
     Visual="Material">
-    <!--<Shell.Resources>
+    <!--  {OnAppTheme Light=Black, Dark=White}  -->
+    <Shell.Resources>
         <ResourceDictionary>
             <Style x:Key="ContactsTab" TargetType="Tab">
                 <Style.Triggers>
                     <Trigger TargetType="Tab" Property="IsChecked" Value="False">
                         <Setter Property="Icon">
                             <Setter.Value>
-                                <OnPlatform x:TypeArguments="FileImageSource">
+                                <OnPlatform x:TypeArguments="ImageSource">
                                     <On Platform="Android" Value="icon_contacts_outline.xml" />
-                                    <On Platform="iOS" Value="" />
-                                    <On Platform="UWP" Value="" />
+                                    <On Platform="iOS" Value="outline_contacts" />
+                                    <On Platform="UWP" Value="outline_contacts.png" />
                                 </OnPlatform>
                             </Setter.Value>
                         </Setter>
@@ -27,10 +28,10 @@
                     <Trigger TargetType="Tab" Property="IsChecked" Value="True">
                         <Setter Property="Icon">
                             <Setter.Value>
-                                <OnPlatform x:TypeArguments="FileImageSource">
+                                <OnPlatform x:TypeArguments="ImageSource">
                                     <On Platform="Android" Value="icon_contacts_solid.xml" />
-                                    <On Platform="iOS" Value="" />
-                                    <On Platform="UWP" Value="" />
+                                    <On Platform="iOS" Value="baseline_contacts" />
+                                    <On Platform="UWP" Value="baseline_contacts.png" />
                                 </OnPlatform>
                             </Setter.Value>
                         </Setter>
@@ -43,10 +44,10 @@
                     <Trigger TargetType="Tab" Property="IsChecked" Value="False">
                         <Setter Property="Icon">
                             <Setter.Value>
-                                <OnPlatform x:TypeArguments="FileImageSource">
+                                <OnPlatform x:TypeArguments="ImageSource">
                                     <On Platform="Android" Value="icon_info_outline.xml" />
-                                    <On Platform="iOS" Value="" />
-                                    <On Platform="UWP" Value="" />
+                                    <On Platform="iOS" Value="outline_info" />
+                                    <On Platform="UWP" Value="outline_info.png" />
                                 </OnPlatform>
                             </Setter.Value>
                         </Setter>
@@ -54,10 +55,10 @@
                     <Trigger TargetType="Tab" Property="IsChecked" Value="True">
                         <Setter Property="Icon">
                             <Setter.Value>
-                                <OnPlatform x:TypeArguments="FileImageSource">
+                                <OnPlatform x:TypeArguments="ImageSource">
                                     <On Platform="Android" Value="icon_info_solid.xml" />
-                                    <On Platform="iOS" Value="" />
-                                    <On Platform="UWP" Value="" />
+                                    <On Platform="iOS" Value="baseline_info" />
+                                    <On Platform="UWP" Value="baseline_info.png" />
                                 </OnPlatform>
                             </Setter.Value>
                         </Setter>
@@ -65,16 +66,14 @@
                 </Style.Triggers>
             </Style>
         </ResourceDictionary>
-    </Shell.Resources>-->
+    </Shell.Resources>
 
     <TabBar>
-        <!--  Style="{StaticResource ContactsTab}"  -->
-        <Tab Title="Contacts" Icon="icon_contacts_solid.xml">
+        <Tab Title="Contacts" Style="{StaticResource ContactsTab}">
             <ShellContent ContentTemplate="{DataTemplate views:ContactsListPage}" />
         </Tab>
 
-        <!--  Style="{StaticResource AboutTab}"  -->
-        <Tab Title="About" Icon="icon_info_solid.xml">
+        <Tab Title="About" Style="{StaticResource AboutTab}">
             <ShellContent ContentTemplate="{DataTemplate views:AboutPage}" />
         </Tab>
     </TabBar>
