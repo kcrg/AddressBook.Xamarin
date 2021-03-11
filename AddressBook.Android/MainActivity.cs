@@ -22,8 +22,7 @@ namespace AddressBook.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(bundle);
-
-            Forms.SetFlags("AppTheme_Experimental");
+            
             Forms.Init(this, bundle);
             FormsMaterial.Init(this, bundle);
             Platform.Init(this, bundle);

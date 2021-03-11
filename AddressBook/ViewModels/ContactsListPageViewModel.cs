@@ -23,7 +23,7 @@ namespace AddressBook.ViewModels
         public ObservableCollection<ContactModel> ContactsList { get; }
         public DelegateCommand AddContactCommand { get; }
         public DelegateCommand SettingsCommand { get; }
-        public DelegateCommand<string> DeleteContactCommand { get; set; }
+        public DelegateCommand<string>? DeleteContactCommand { get; set; }
         public DelegateCommand<IReadOnlyList<object>> ItemTappedCommand { get; }
 
         public DelegateCommand LoadDatabase { get; }

@@ -8,7 +8,7 @@ namespace AddressBook.Views
     [QueryProperty("Entry", "entry")]
     public partial class ContactCreatePage : ContentPage
     {
-        private string Json;
+        private string? Json;
 
         public string Entry
         {

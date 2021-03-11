@@ -19,10 +19,10 @@ namespace AddressBook
         private const int smallWightResolution = 768;
         private const int smallHeightResolution = 1280;
 
-        private static ContactsDatabaseService databaseValue;
+        private static ContactsDatabaseService? databaseValue;
 
-        public static ContactsDatabaseService Database =>
-            databaseValue ?? (databaseValue = new ContactsDatabaseService(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "ContactsDatabase.db")));
+        public static ContactsDatabaseService Database => databaseValue ??= 
+            new ContactsDatabaseService(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "ContactsDatabase.db"));
 
         private void LoadStyles()
         {
@@ -47,8 +47,6 @@ namespace AddressBook
 
             return width <= smallWightResolution || height <= smallHeightResolution;
         }
-
-        public App() : this(null) { }
 
         public App(IPlatformInitializer initializer) : base(initializer) { }
 

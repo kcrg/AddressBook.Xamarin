@@ -33,7 +33,7 @@
                 HorizontalOptions="Center"
                 HorizontalTextAlignment="Center"
                 Style="{StaticResource ListLabel}"
-                Text="{x:Binding ID,
+                Text="{Binding ID,
                                  Mode=OneWayToSource}"
                 VerticalOptions="Start">
                 <Label.FormattedText>

@@ -9,16 +9,16 @@ namespace AddressBook.ViewModels
 {
     public class ContactCreatePageViewModel : BindableBase
     {
-        public string _validateMessage;
+        public string? _validateMessage;
 
         public int ID { get; set; }
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public string PhoneNumber { get; set; }
-        public string Email { get; set; }
-        public string Address { get; set; }
+        public string? Name { get; set; }
+        public string? Surname { get; set; }
+        public string? PhoneNumber { get; set; }
+        public string? Email { get; set; }
+        public string? Address { get; set; }
 
-        public string ValidateMessage
+        public string? ValidateMessage
         {
             get => _validateMessage;
             set => SetProperty(ref _validateMessage, value);
@@ -33,11 +33,11 @@ namespace AddressBook.ViewModels
 
         public async void AddContact()
         {
-            if (!IsEmpty(Name) ||
-                !IsEmpty(Surname) ||
-                !IsEmpty(PhoneNumber) ||
-                !IsEmpty(Email) ||
-                !IsEmpty(Address) ||
+            if (string.IsNullOrWhiteSpace(Name) ||
+                string.IsNullOrWhiteSpace(Surname) ||
+                string.IsNullOrWhiteSpace(PhoneNumber) ||
+                string.IsNullOrWhiteSpace(Email) ||
+                string.IsNullOrWhiteSpace(Address) ||
                 !IsEmail(Email) ||
                 !IsNumber(PhoneNumber))
             {
@@ -60,17 +60,6 @@ namespace AddressBook.ViewModels
             }
         }
 
-        public bool IsEmpty(string value)
-        {
-            if (value is null)
-            {
-                return false;
-            }
-
-            string str = value as string;
-            return !string.IsNullOrWhiteSpace(str);
-        }
-
         public bool IsEmail(string value)
         {
             if (value is null)
@@ -86,7 +75,7 @@ namespace AddressBook.ViewModels
 
         public bool IsNumber(string value)
         {
-            if (value is null && value.Length != 9)
+            if (value is null || value?.Length != 9)
             {
                 return false;
             }
