@@ -1,0 +1,11 @@
+﻿<Application
+    x:Class="AddressBook.MAUI.App"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:AddressBook.MAUI"
+    xmlns:windows="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.WindowsSpecific;assembly=Microsoft.Maui.Controls"
+    windows:Application.ImageDirectory="Assets">
+    <Application.Resources>
+        <ResourceDictionary x:Name="dictionary" />
+    </Application.Resources>
+</Application>

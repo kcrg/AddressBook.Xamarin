@@ -1,0 +1,116 @@
+﻿<ContentPage
+    x:Class="AddressBook.MAUI.Views.ContactsListPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:models="clr-namespace:AddressBook.MAUI.Models"
+    xmlns:viewmodels="clr-namespace:AddressBook.MAUI.ViewModels"
+    Title="Contacts"
+    Visual="Material">
+    <ContentPage.BindingContext>
+        <viewmodels:ContactsListPageViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Command="{Binding AddContactCommand}" Text="Add">
+            <ToolbarItem.IconImageSource>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android" Value="icon_add_contact.xml" />
+                    <On Platform="iOS" Value="" />
+                    <On Platform="UWP" Value="" />
+                </OnPlatform>
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+        <!--<ToolbarItem Command="{Binding SettingsCommand}" Text="Settings">
+            <ToolbarItem.IconImageSource>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android" Value="icon_settings.xml" />
+                    <On Platform="iOS" Value="" />
+                    <On Platform="UWP" Value="" />
+                </OnPlatform>
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>-->
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <Grid>
+            <ActivityIndicator
+                IsRunning="{Binding IsLoading}"
+                IsVisible="{Binding IsLoading}"
+                Style="{StaticResource ActivityIndicator}" />
+
+            <!--  TODO: Passs cussrent selected item  -->
+            <CollectionView
+                x:Name="collectionView"
+                BackgroundColor="Aqua"
+                ItemSizingStrategy="MeasureFirstItem"
+                ItemsSource="{Binding ContactsList}"
+                SelectionChangedCommand="{Binding ItemTappedCommand}"
+                SelectionMode="Single">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" />
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="10">
+                            <Frame Padding="8" CornerRadius="0">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="76*" />
+                                        <ColumnDefinition Width="12*" />
+                                        <ColumnDefinition Width="12*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <StackLayout Grid.Column="0" Margin="12,0,0,0">
+                                        <Label Style="{StaticResource ListLabel}">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="{Binding Name}" />
+                                                    <Span Text=" " />
+                                                    <Span Text="{Binding Surname}" />
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                        <Label
+                                            Style="{StaticResource ListLabel}"
+                                            Text="{Binding PhoneNumber}"
+                                            TextColor="DarkGray" />
+                                    </StackLayout>
+
+                                    <ImageButton
+                                        Grid.Column="1"
+                                        Clicked="EditContact"
+                                        CommandParameter="{Binding ID}"
+                                        Source="icon_create.xml"
+                                        Style="{StaticResource ListImageButton}" />
+
+                                    <ImageButton
+                                        Grid.Column="2"
+                                        Clicked="DeleteContact"
+                                        CommandParameter="{Binding ID}"
+                                        Source="icon_delete.xml"
+                                        Style="{StaticResource ListImageButton}" />
+                                </Grid>
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+                <CollectionView.EmptyView>
+                    <Grid>
+                        <Label
+                            HorizontalOptions="Center"
+                            Style="{StaticResource ListEmptyViewLabel}"
+                            VerticalOptions="Center">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="There is no contacts to show.&#x0a;" />
+                                    <Span FontSize="14" Text="Try add a new one!" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </Grid>
+                </CollectionView.EmptyView>
+            </CollectionView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

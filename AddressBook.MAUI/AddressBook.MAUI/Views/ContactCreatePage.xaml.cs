@@ -1,9 +1,9 @@
-﻿using AddressBook.Models;
+﻿using AddressBook.MAUI.Models;
+using Microsoft.Maui.Controls;
 using Newtonsoft.Json;
 using System;
-using Xamarin.Forms;
 
-namespace AddressBook.Views
+namespace AddressBook.MAUI.Views
 {
     [QueryProperty("Entry", "entry")]
     public partial class ContactCreatePage : ContentPage

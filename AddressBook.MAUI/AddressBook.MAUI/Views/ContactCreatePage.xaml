@@ -1,0 +1,92 @@
+﻿<ContentPage
+    x:Class="AddressBook.MAUI.Views.ContactCreatePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewmodels="clr-namespace:AddressBook.MAUI.ViewModels"
+    Title="Add/Edit"
+    Shell.PresentationMode="Animated"
+    Visual="Material">
+    <ContentPage.BindingContext>
+        <viewmodels:ContactCreatePageViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Command="{Binding SaveContactCommand}" Text="Save">
+            <ToolbarItem.IconImageSource>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android" Value="icon_save.xml" />
+                    <On Platform="iOS" Value="baseline_save.png" />
+                    <On Platform="UWP" Value="baseline_save.png" />
+                </OnPlatform>
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <Grid Padding="20">
+            <Label
+                x:Name="welcomeLabel"
+                Margin="0,25,0,0"
+                FontSize="24"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                Style="{StaticResource ListLabel}"
+                Text="{Binding ID, Mode=OneWayToSource}"
+                VerticalOptions="Start">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="You are changing contact&#x0a;with ID " />
+                        <Span x:Name="IDLabel" Text="{Binding ID, Mode=OneWayToSource}" />
+                        <Span Text="." />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <VerticalStackLayout VerticalOptions="Center">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Entry
+                        x:Name="NameEntry"
+                        Grid.Column="0"
+                        BackgroundColor="White"
+                        ClearButtonVisibility="WhileEditing"
+                        Placeholder="Name"
+                        Text="{Binding Name}" />
+                    <Entry
+                        x:Name="SurnameEntry"
+                        Grid.Column="1"
+                        BackgroundColor="White"
+                        ClearButtonVisibility="WhileEditing"
+                        Placeholder="Surname"
+                        Text="{Binding Surname}" />
+                </Grid>
+
+                <Entry
+                    x:Name="PhoneEntry"
+                    BackgroundColor="White"
+                    ClearButtonVisibility="WhileEditing"
+                    Keyboard="Telephone"
+                    Placeholder="Phone number"
+                    Text="{Binding PhoneNumber}" />
+                <Entry
+                    x:Name="EmailEntry"
+                    BackgroundColor="White"
+                    ClearButtonVisibility="WhileEditing"
+                    Keyboard="Email"
+                    Placeholder="E-mail"
+                    Text="{Binding Email}" />
+                <Entry
+                    x:Name="AddressEntry"
+                    BackgroundColor="White"
+                    ClearButtonVisibility="WhileEditing"
+                    Placeholder="Address"
+                    Text="{Binding Address}" />
+
+                <Label Text="{Binding ValidateMessage}" TextColor="Red" />
+            </VerticalStackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

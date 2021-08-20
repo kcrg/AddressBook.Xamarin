@@ -1,13 +1,12 @@
-﻿using AddressBook.Models;
-using Prism.Commands;
-using Prism.Mvvm;
+﻿using AddressBook.MAUI.Models;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Essentials;
 using System.Text.RegularExpressions;
-using Xamarin.Essentials;
-using Xamarin.Forms;
+using System.Windows.Input;
 
-namespace AddressBook.ViewModels
+namespace AddressBook.MAUI.ViewModels
 {
-    public class ContactCreatePageViewModel : BindableBase
+    public class ContactCreatePageViewModel : BindableObject
     {
         public string? _validateMessage;
 
@@ -20,15 +19,15 @@ namespace AddressBook.ViewModels
 
         public string? ValidateMessage
         {
-            get => _validateMessage;
-            set => SetProperty(ref _validateMessage, value);
+            get;
+            set;
         }
 
-        public DelegateCommand SaveContactCommand { get; }
+        public ICommand SaveContactCommand { get; }
 
         public ContactCreatePageViewModel()
         {
-            SaveContactCommand = new DelegateCommand(AddContact);
+            SaveContactCommand = new Command(AddContact);
         }
 
         public async void AddContact()
@@ -45,7 +44,7 @@ namespace AddressBook.ViewModels
             }
             else
             {
-                ContactModel contact = new ContactModel()
+                ContactModel contact = new()
                 {
                     ID = ID,
                     Name = Name,
@@ -54,6 +53,7 @@ namespace AddressBook.ViewModels
                     Email = Email,
                     Address = Address
                 };
+
                 await App.Database.SaveContactAsync(contact).ConfigureAwait(false);
 
                 MainThread.BeginInvokeOnMainThread(async () => await Shell.Current.Navigation.PopAsync().ConfigureAwait(false));
@@ -67,7 +67,7 @@ namespace AddressBook.ViewModels
                 return false;
             }
 
-            Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            Regex regex = new(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
             Match match = regex.Match(value);
 
             return match.Success;

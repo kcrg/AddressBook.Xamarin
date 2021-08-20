@@ -1,0 +1,72 @@
+﻿<ContentPage
+    x:Class="AddressBook.MAUI.Views.AboutPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewmodels="clr-namespace:AddressBook.MAUI.ViewModels"
+    Title="About"
+    Visual="Material">
+    <ContentPage.BindingContext>
+        <viewmodels:AboutPageViewModel />
+    </ContentPage.BindingContext>
+    <!--<ContentPage.ToolbarItems>
+        <ToolbarItem Command="{Binding SettingsCommand}" Text="Settings">
+            <ToolbarItem.IconImageSource>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android" Value="icon_settings.xml" />
+                    <On Platform="iOS" Value="" />
+                    <On Platform="UWP" Value="" />
+                </OnPlatform>
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>-->
+
+    <ContentPage.Content>
+        <Grid>
+            <StackLayout x:Name="DescriptionPanel" Style="{StaticResource AboutDescriptionPanel}">
+                <Image x:Name="ProfilePicture" Style="{StaticResource AboutProfilePicture}" />
+
+                <Label Style="{StaticResource AboutTitleLabel}" Text="Kacper Tryniecki" />
+                <Label Style="{StaticResource AboutDescLabel}" Text=".NET Mobile Developer" />
+
+                <Label
+                    Margin="0,20,0,0"
+                    FontSize="24"
+                    Style="{StaticResource AboutTitleLabel}"
+                    Text="Contact:" />
+                <Label Style="{StaticResource AboutDescLabel}" Text="Phone: +48 733 428 869">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Phone: " />
+                            <Span Text="+48 733 428 869" TextDecorations="Underline">
+                                <Span.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding PhoneTappedCommand}" />
+                                </Span.GestureRecognizers>
+                            </Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label
+                    Margin="0,10,0,0"
+                    Style="{StaticResource AboutDescLabel}"
+                    Text="E-mail: kacper@tryniecki.com">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="E-mail: " />
+                            <Span Text=" " />
+                            <Span Text="kacper@tryniecki.com" TextDecorations="Underline">
+                                <Span.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding EmailTappedCommand}" />
+                                </Span.GestureRecognizers>
+                            </Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <Button
+                x:Name="GithubButton"
+                Command="{Binding OpenGithubCommand}"
+                Style="{StaticResource AboutButton}" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
